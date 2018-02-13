@@ -21,7 +21,10 @@ public class keypressedcontroller : MonoBehaviour {
 		Debug.Log ("pianoplaying" + mykeynumber);
 		mymanager.MousePressed (mykeynumber);
 
-	}
 
-	void
 }
+}
+
+
+	//void
+
