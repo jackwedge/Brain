@@ -871,29 +871,32 @@ GameObject:
   - component: {fileID: 1160882663}
   - component: {fileID: 1160882662}
   m_Layer: 0
-  m_Name: rainbow for brain0001
+  m_Name: rainbow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1160882662
-Animator:
-  serializedVersion: 3
+--- !u!114 &1160882662
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160882661}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 962c9437a33d74924aa356441a9d08d9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc2d2fef794b4f81bc5c98880711ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainbowsprites:
+  - {fileID: 21300000, guid: f9382bdb2d2f04a008ac90cd10b0cf20, type: 3}
+  - {fileID: 21300000, guid: 66f8e0f2a84eb42b4b24e850ec38e781, type: 3}
+  - {fileID: 21300000, guid: d54ef01c726254da9b6d3367b2dc0a0a, type: 3}
+  - {fileID: 21300000, guid: f0781f8018e534eaab6bdbaa069764e3, type: 3}
+  - {fileID: 21300000, guid: 52fafb17d9f394f7096217ea609d0769, type: 3}
+  - {fileID: 21300000, guid: 502dd98dce66c412085c9061d01ccffa, type: 3}
+  - {fileID: 21300000, guid: 401cc22d05cde415c92ecdd509666558, type: 3}
+  rainbowSpriterenderer: {fileID: 1160882663}
 --- !u!212 &1160882663
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -945,7 +948,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1160882661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 3.58, z: -9}
+  m_LocalPosition: {x: 0.2, y: 3.35, z: -9}
   m_LocalScale: {x: 1, y: 0.396562, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1234,7 +1237,7 @@ GameObject:
   - component: {fileID: 1616605615}
   - component: {fileID: 1616605617}
   m_Layer: 0
-  m_Name: rainbow for brain0014
+  m_Name: keyboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1291,7 +1294,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616605614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.43, z: 0}
   m_LocalScale: {x: 0.93750006, y: 0.5624998, z: 1}
   m_Children:
   - {fileID: 897903584}
@@ -1344,6 +1347,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dc0a2cbd212e54449b763953e00c0fbe, type: 3}
   - {fileID: 21300000, guid: 593e0d3729f104d318488ed2eab27955, type: 3}
   keyboardSpriterenderer: {fileID: 0}
+  myColorHighlight: {fileID: 1160882662}
+  RainbowSpriterenderer: {fileID: 0}
+  startingRainbow: {fileID: 21300000, guid: 5c88e5a1187c3486a8053a62fcd006ab, type: 3}
 --- !u!1 &1901809112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,29 +1577,51 @@ GameObject:
   - component: {fileID: 1961169083}
   - component: {fileID: 1961169082}
   m_Layer: 0
-  m_Name: dashboard 4 brain0028
+  m_Name: word rack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1961169082
-Animator:
-  serializedVersion: 3
+--- !u!114 &1961169082
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1961169081}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1bf8e6ab307a14d93a0e074cc63e8cc3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebbafc8e6f8e74a0ebb8e8be04cd4a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alphabetsprites:
+  - {fileID: 21300000, guid: a20f221d112794c208df44b751b993b6, type: 3}
+  - {fileID: 21300000, guid: f88acda648b45467e9564b0f2d338797, type: 3}
+  - {fileID: 21300000, guid: 47cda41c2b1794ff4b6164bbac3e88dc, type: 3}
+  - {fileID: 21300000, guid: 672d43ec414164e10abca0cc24a5ff9b, type: 3}
+  - {fileID: 21300000, guid: b034c66de3acb48428a70a043f37c64a, type: 3}
+  - {fileID: 21300000, guid: 45f1542c5f86d4a62991bddb6f9e168d, type: 3}
+  - {fileID: 21300000, guid: 0c7b03bd081ed47e0816eb1be5336ac6, type: 3}
+  - {fileID: 21300000, guid: 6f0dd424b30a6479cab91316d49c6ed9, type: 3}
+  - {fileID: 21300000, guid: b2073860fa6c24364be4bf77bb0dc407, type: 3}
+  - {fileID: 21300000, guid: ba056e66a4465496b961bf368c7aa856, type: 3}
+  - {fileID: 21300000, guid: 843c44ecf2b694f41a09eebb604a42ac, type: 3}
+  - {fileID: 21300000, guid: 7af96492566bb4128a0b92166a7ca52f, type: 3}
+  - {fileID: 21300000, guid: 53450ab32683b493a81de89400a790bb, type: 3}
+  - {fileID: 21300000, guid: b5fdd9789b7c140cc82fb58ed15c0ae3, type: 3}
+  - {fileID: 21300000, guid: c1ae595a9ba5a4f99ac889557b37dd42, type: 3}
+  - {fileID: 21300000, guid: 1cc3052d7beb5437fb3ec7f826e32dd1, type: 3}
+  - {fileID: 21300000, guid: 80194e6b5c87249db8561f6aff76f61b, type: 3}
+  - {fileID: 21300000, guid: 07440815ad8444e399d468ce67f6dd1d, type: 3}
+  - {fileID: 21300000, guid: d4cdafc2d37f049898bd24b152b2e09b, type: 3}
+  - {fileID: 21300000, guid: 55fff57aefa194d1e9169fb32fd7dc2c, type: 3}
+  - {fileID: 21300000, guid: b1e092a58b05c46daa2282f95039f223, type: 3}
+  - {fileID: 21300000, guid: 3a65c9ff424114ca3b6f8ebc595b5c7f, type: 3}
+  - {fileID: 21300000, guid: 3ab726ab8d9d44b1f9a05c0a92dd28e2, type: 3}
+  - {fileID: 21300000, guid: c64440d6d0d1b4eeeb653a9ff505ed3a, type: 3}
+  - {fileID: 21300000, guid: 3534c38f1a91142419c95737a84d1b24, type: 3}
+  - {fileID: 21300000, guid: e4c4dd9183c9f4749b2a73c5166d3ad8, type: 3}
+  rainbowSpriterenderer: {fileID: 1961169083}
 --- !u!212 &1961169083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1645,8 +1673,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1961169081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13, y: -2.71, z: 2}
-  m_LocalScale: {x: 0.92437446, y: 0.5087498, z: 1}
+  m_LocalPosition: {x: -0.01, y: -2.95, z: 2}
+  m_LocalScale: {x: 0.9549943, y: 0.57234365, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2

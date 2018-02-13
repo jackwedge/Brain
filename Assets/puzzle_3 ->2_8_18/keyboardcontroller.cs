@@ -9,10 +9,17 @@ public class keyboardcontroller : MonoBehaviour {
 	public Sprite[] keyboardsprites;
 	public SpriteRenderer keyboardSpriterenderer;
 	// Use this for initialization
+	public rainbowController myColorHighlight;
+	public SpriteRenderer RainbowSpriterenderer;
+	public Sprite startingRainbow;
 
 	void Start () {
 		keyboardSpriterenderer = GetComponent<SpriteRenderer> ();
 		key_14 = keyboardSpriterenderer.sprite;
+
+		RainbowSpriterenderer = GetComponent<SpriteRenderer> ();
+		//rainbow_for_brain0001 = "rainbow_for_brain0001";
+
 //		key_15 = keyboardSpriterenderer.sprite = keyboardsprites [keynumber];
 	}
 	
@@ -28,7 +35,10 @@ public class keyboardcontroller : MonoBehaviour {
 
 		if (Input.GetMouseButtonUp (0)) {
 			Debug.Log ("Pressed left click.");
+			myColorHighlight.ChangeRainbowColor (startingRainbow);
+
 			keyboardSpriterenderer.sprite = key_14;
+
 
 
 		}
@@ -42,6 +52,10 @@ public class keyboardcontroller : MonoBehaviour {
 		keyboardSpriterenderer.sprite = keyboardsprites [keynumber];
 //		if (!MousePressed()){
 //			key_14 = keyboardSpriterenderer.sprite;
+
+		myColorHighlight.ChangeRainbowColor (keynumber % 7);
+
+
 
 	
 	}
