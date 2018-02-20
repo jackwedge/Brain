@@ -20,10 +20,9 @@ public class keypressedcontroller : MonoBehaviour {
 	void OnMouseDown (){
 		Debug.Log ("pianoplaying" + mykeynumber);
 		mymanager.MousePressed (mykeynumber);
+	}
 
 
-
-}
 }
 
 

@@ -12,6 +12,9 @@ public class keyboardcontroller : MonoBehaviour {
 	public rainbowController myColorHighlight;
 	public SpriteRenderer RainbowSpriterenderer;
 	public Sprite startingRainbow;
+	public AlphabetController LetterSelecter;
+	public SpriteRenderer AlphabetSpriterenderer;
+
 
 	void Start () {
 		keyboardSpriterenderer = GetComponent<SpriteRenderer> ();
@@ -42,21 +45,19 @@ public class keyboardcontroller : MonoBehaviour {
 
 
 		}
-
-
-		
-		
 	}
-//
+
 	public void MousePressed(int keynumber){
 		keyboardSpriterenderer.sprite = keyboardsprites [keynumber];
-//		if (!MousePressed()){
-//			key_14 = keyboardSpriterenderer.sprite;
+
 
 		myColorHighlight.ChangeRainbowColor (keynumber % 7);
 
 
+		LetterSelecter.ChangeLetter (keynumber % 7);
 
+
+	
 	
 	}
 }
