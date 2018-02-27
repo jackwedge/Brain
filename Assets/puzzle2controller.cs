@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class puzzle2controller : MonoBehaviour {
 	public SpriteRenderer lensSpriterenderer;
-	public Sprite [] lens1sprites;
-	public Sprite [] lens2sprites;
-	public Sprite [] lens3sprites;
-	public Sprite [] lens1Asprites;
-	public Sprite [] lens2Asprites;
-	public Sprite [] lens3Asprites;
+	public Sprite [] mysprites;
+	public puzzle2controller lens2;
+
 
 
 
@@ -35,8 +32,13 @@ public class puzzle2controller : MonoBehaviour {
 
 
 	void OnMouseDown (){
-		lensSpriterenderer.sprite = lens1sprites [interval%8];
-		interval++;
+		lensSpriterenderer.sprite = mysprites [interval%8];
+		if (lens2 != null) {
+			lens2.lensSpriterenderer.sprite = mysprites [interval % 8];
+		}
+			interval++;
+	
+
 	}
 
 }

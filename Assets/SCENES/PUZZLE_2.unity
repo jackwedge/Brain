@@ -121,8 +121,8 @@ GameObject:
   m_Component:
   - component: {fileID: 169562736}
   - component: {fileID: 169562734}
-  - component: {fileID: 169562733}
   - component: {fileID: 169562735}
+  - component: {fileID: 169562733}
   m_Layer: 0
   m_Name: lens 3
   m_TagString: Untagged
@@ -130,8 +130,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &169562733
-BoxCollider2D:
+--- !u!58 &169562733
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -142,19 +142,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 2.03}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.1, y: 2.11}
   serializedVersion: 2
-  m_Size: {x: 5.33, y: 5.17}
-  m_EdgeRadius: 0
+  m_Radius: 2.84
 --- !u!212 &169562734
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -211,25 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lensSpriterenderer: {fileID: 1271674434}
-  lens1sprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2sprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3sprites:
+  mysprites:
   - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
   - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
   - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
@@ -238,33 +210,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
   - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
   - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
-  lens1Asprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2Asprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3Asprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
+  lens2: {fileID: 427727217}
 --- !u!4 &169562736
 Transform:
   m_ObjectHideFlags: 0
@@ -286,9 +232,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 427727215}
-  - component: {fileID: 427727218}
   - component: {fileID: 427727217}
   - component: {fileID: 427727216}
+  - component: {fileID: 427727218}
   m_Layer: 0
   m_Name: lens 3A
   m_TagString: Untagged
@@ -365,25 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lensSpriterenderer: {fileID: 1271674434}
-  lens1sprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2sprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3sprites:
+  mysprites:
   - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
   - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
   - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
@@ -392,35 +320,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
   - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
   - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
-  lens1Asprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2Asprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3Asprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
---- !u!61 &427727218
-BoxCollider2D:
+  lens2: {fileID: 0}
+--- !u!58 &427727218
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -431,19 +333,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04, y: 2.17}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -0.02, y: 2.07}
   serializedVersion: 2
-  m_Size: {x: 5.43, y: 5.27}
-  m_EdgeRadius: 0
+  m_Radius: 3.1
 --- !u!1 &1079601839
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,8 +345,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1079601840}
   - component: {fileID: 1079601843}
-  - component: {fileID: 1079601842}
   - component: {fileID: 1079601841}
+  - component: {fileID: 1079601842}
   m_Layer: 0
   m_Name: lens 2A
   m_TagString: Untagged
@@ -487,16 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lensSpriterenderer: {fileID: 1271674434}
-  lens1sprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2sprites:
+  mysprites:
   - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
   - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
   - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
@@ -505,44 +388,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
   - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
   - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3sprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
-  lens1Asprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2Asprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3Asprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
---- !u!61 &1079601842
-BoxCollider2D:
+  lens2: {fileID: 0}
+--- !u!58 &1079601842
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -553,19 +401,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.41, y: 0.62}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -1.4, y: 0.69}
   serializedVersion: 2
-  m_Size: {x: 5.17, y: 5.38}
-  m_EdgeRadius: 0
+  m_Radius: 3.1
 --- !u!212 &1079601843
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -640,7 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lensSpriterenderer: {fileID: 1271674434}
-  lens1sprites:
+  mysprites:
   - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
   - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
   - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
@@ -649,51 +487,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
   - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
   - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2sprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3sprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
-  lens1Asprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2Asprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3Asprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
+  lens2: {fileID: 1356767216}
 --- !u!212 &1271674434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -751,8 +545,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1271674436
-BoxCollider2D:
+--- !u!58 &1271674436
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -763,19 +557,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.95, y: -0.57}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -2.89, y: -0.64}
   serializedVersion: 2
-  m_Size: {x: 5.27, y: 5.2}
-  m_EdgeRadius: 0
+  m_Radius: 2.94
 --- !u!1 &1356767215
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,8 +569,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1356767219}
   - component: {fileID: 1356767218}
-  - component: {fileID: 1356767217}
   - component: {fileID: 1356767216}
+  - component: {fileID: 1356767217}
   m_Layer: 0
   m_Name: lens 1A
   m_TagString: Untagged
@@ -806,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lensSpriterenderer: {fileID: 1271674434}
-  lens1sprites:
+  mysprites:
   - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
   - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
   - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
@@ -815,53 +599,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
   - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
   - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2sprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3sprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
-  lens1Asprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2Asprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3Asprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
---- !u!61 &1356767217
-BoxCollider2D:
+  lens2: {fileID: 0}
+--- !u!58 &1356767217
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -872,19 +612,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.82, y: -0.66}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -2.87, y: -0.72}
   serializedVersion: 2
-  m_Size: {x: 5.54, y: 5.44}
-  m_EdgeRadius: 0
+  m_Radius: 3.16
 --- !u!212 &1356767218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -953,6 +683,7 @@ GameObject:
   - component: {fileID: 1463986280}
   - component: {fileID: 1463986279}
   - component: {fileID: 1463986278}
+  - component: {fileID: 1463986282}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -995,7 +726,7 @@ Camera:
   field of view: 60
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: -10
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1004,7 +735,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -1016,12 +747,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1463986277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -2.6, z: -10}
+  m_LocalPosition: {x: 19.73, y: -0.56, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1463986282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1463986277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17872f77e6b4698aa6f870ab5867d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Puzzle2position: {x: -4, y: -2.6, z: -10}
+  Puzzle2solvedposition: {x: 19.73, y: -0.56, z: -10}
+  state: 0
 --- !u!1 &2020561424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,8 +798,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &2020561426
-BoxCollider2D:
+--- !u!58 &2020561426
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1065,19 +810,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.48, y: 0.73}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.2, y: 10.8}
-    newSize: {x: 19.2, y: 10.8}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: -1.45, y: 0.58}
   serializedVersion: 2
-  m_Size: {x: 5.06, y: 5.3}
-  m_EdgeRadius: 0
+  m_Radius: 3.08
 --- !u!212 &2020561427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1134,16 +869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lensSpriterenderer: {fileID: 1271674434}
-  lens1sprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2sprites:
+  mysprites:
   - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
   - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
   - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
@@ -1152,39 +878,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
   - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
   - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3sprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
-  lens1Asprites:
-  - {fileID: 21300000, guid: fef1bd25fb5e74d1a81d62abfa16ea3b, type: 3}
-  - {fileID: 21300000, guid: 361450dd4b21545ebb25305145164281, type: 3}
-  - {fileID: 21300000, guid: 9b4896c47b6c24fa196737558c5ffe05, type: 3}
-  - {fileID: 21300000, guid: 14d9f4fbcefe746daaafcc1f9d88c89d, type: 3}
-  - {fileID: 21300000, guid: 1709f799a287c4e3d8838f72e54903ae, type: 3}
-  - {fileID: 21300000, guid: 6d0694cdd789f47efab669a1fd193454, type: 3}
-  - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
-  - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
-  lens2Asprites:
-  - {fileID: 21300000, guid: ed276690a8ef845c59e3cb17bf0bdd3e, type: 3}
-  - {fileID: 21300000, guid: cdeff7dbd7988420aa8d97cfac1c35d1, type: 3}
-  - {fileID: 21300000, guid: a06b36de811f5412084d9ebdba7658ef, type: 3}
-  - {fileID: 21300000, guid: dbab31d5f5ac04555a2bf2bc78ec0ff3, type: 3}
-  - {fileID: 21300000, guid: 71740326009654d46bf58501980b0b69, type: 3}
-  - {fileID: 21300000, guid: 419fef8910c3a4ec1a123fcb0b575cc2, type: 3}
-  - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
-  - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
-  lens3Asprites:
-  - {fileID: 21300000, guid: f29b417dc542c4b00ae3fedc432411c4, type: 3}
-  - {fileID: 21300000, guid: 5307f0c67e6b14898b69cf56bfec8be5, type: 3}
-  - {fileID: 21300000, guid: 0db690738a6994fb580664ff4f301a80, type: 3}
-  - {fileID: 21300000, guid: 5b8901139f0be4ac1b27640e25c60679, type: 3}
-  - {fileID: 21300000, guid: b33c835cc2bec43069c96f84c3fdf64b, type: 3}
-  - {fileID: 21300000, guid: 33608e9eb967d45fba4cbb0c1aeea704, type: 3}
-  - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
-  - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
+  lens2: {fileID: 1079601841}
