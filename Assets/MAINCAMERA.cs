@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MAINCAMERA : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class MAINCAMERA : MonoBehaviour
 	public Vector3 puzzle1position;
 	public Vector3 youareeatenposition;
 	public Vector3 welcome2brainposition;
+	public Vector3 Puzzle2position;
+	public Vector3 Puzzle2solvedposition;
 	public AudioClip StartSound;
 	public AudioSource Sound;
 
@@ -114,7 +117,7 @@ public class MAINCAMERA : MonoBehaviour
 
 		if (state==7){
 			transform.position= welcome2brainposition;
-
+			SceneManager.LoadScene ("PUZZLE 2");
 		}
 
 //		if (state == 8) {
