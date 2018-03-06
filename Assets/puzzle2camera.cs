@@ -7,21 +7,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class puzzle2camera : MonoBehaviour
 {
 	public Vector3 Puzzle2position;
 	public Vector3 Puzzle2solvedposition;
+	public Vector3 Puzzle2lookoutside;
+	public Vector3 gothrougheyesocket;
+	public lensmanager manager;
+
 
 	public int state = 0;
 
 
-
+	public bool iseyeballpov=false;
 
 
 	// Use this for initialization
 	void Start ()
 	{
-		
+		state = 0;
 	}
 	
 	// Update is called once per frame
@@ -40,6 +46,7 @@ public class puzzle2camera : MonoBehaviour
 
 				//transform.position = Puzzle2solvedposition;
 				state = 1;
+				iseyeballpov = false;
 
 			}
 		}
@@ -49,10 +56,33 @@ public class puzzle2camera : MonoBehaviour
 			if (Input.GetKeyDown ("space")) {
 				//transform.position = Puzzle2position;
 				state = 0;
+				iseyeballpov = true;
 			}
 		}
+
+		if (state == 2) {
+			transform.position = Puzzle2lookoutside; 
+
+
+		}
+
+		if (state == 3) {
+			transform.position = gothrougheyesocket;
+		}
+
+
+		if (manager.youreawinner) {
+			state = 2;
+			transform.position = Puzzle2lookoutside;
+		}
+			
+
+
+
 	}
 }
 
-	
+
+
+
 	

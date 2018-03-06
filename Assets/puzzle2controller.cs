@@ -8,6 +8,12 @@ public class puzzle2controller : MonoBehaviour {
 	public puzzle2controller lens2;
 
 
+//	public Sprite[] currentlens1 = mysprites[7];
+//	public Sprite[] currentlens2 = mysprites[7];
+//	public Sprite[] currentlens3 = mysprites[7];
+	public int	mylensnumber=1;
+
+
 
 
 
@@ -15,6 +21,9 @@ public class puzzle2controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// prints hello
+		string s = "press space bar to change perspectives";
+
 		lensSpriterenderer = GetComponent<SpriteRenderer> ();
 
 		
