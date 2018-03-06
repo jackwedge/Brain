@@ -27,7 +27,12 @@ public class MAINCAMERA : MonoBehaviour
 
 	public int state = 0;
 
-
+	public GameObject B;
+	public GameObject R;
+	public GameObject A;
+	public GameObject I;
+	public GameObject N;
+	public GameObject BrainAnim;
 
 
 	// Use this for initialization
@@ -42,6 +47,24 @@ public class MAINCAMERA : MonoBehaviour
 	}
 	
 	// Update is called once per frame
+
+
+
+
+
+
+
+
+
+
+IEnumerator delay (float duration)
+{
+yield return new WaitForSeconds (duration);
+	transform.position = treeposition;
+	state = 1;
+
+}
+
 	void Update ()
 	{
 
@@ -51,11 +74,17 @@ public class MAINCAMERA : MonoBehaviour
 		if (state == 0) {
 			transform.position = titleposition;
 			if (Input.GetMouseButton (0)) {
-//					timer += Time.deltaTime;
-//					if (timer > 3) {
-				transform.position = treeposition;
-				state = 1;
-				
+
+				Destroy (B);
+				Destroy (R);
+				Destroy (A);
+				Destroy (I);
+				Destroy (N);
+
+				BrainAnim.SetActive (true);
+
+			StartCoroutine(delay(3));
+
 			}
 
 

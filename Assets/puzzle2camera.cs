@@ -43,7 +43,7 @@ public class puzzle2camera : MonoBehaviour
 		if (state == 0) {
 			transform.position = Puzzle2position;
 			if (Input.GetKeyDown ("space")) {
-
+				
 				//transform.position = Puzzle2solvedposition;
 				state = 1;
 				iseyeballpov = false;
@@ -53,35 +53,52 @@ public class puzzle2camera : MonoBehaviour
 
 		else if (state == 1) {
 			transform.position = Puzzle2solvedposition;
+			//Debug.Log ("FUCKFUCK");
+			iseyeballpov = true;
 			if (Input.GetKeyDown ("space")) {
 				//transform.position = Puzzle2position;
 				state = 0;
-				iseyeballpov = true;
+			
+		
 			}
 		}
 
 		if (state == 2) {
 			transform.position = Puzzle2lookoutside; 
-
-
 		}
+
+
+
 
 		if (state == 3) {
 			transform.position = gothrougheyesocket;
 		}
 
 
-		if (manager.youreawinner) {
-			state = 2;
-			transform.position = Puzzle2lookoutside;
+		if (manager.youreawinner && iseyeballpov){
+			Debug.Log ("happydays");
+			StartCoroutine(delay(3));
+
 		}
-			
+
+
+
+	}
+
+
+
+	IEnumerator delay (float duration)
+	{
+		//Debug.Log ("startingdelay");
+		yield return new WaitForSeconds (duration);
+		iseyeballpov = true;
+		transform.position = Puzzle2lookoutside;
+		state = 2;
 
 
 
 	}
 }
-
 
 
 

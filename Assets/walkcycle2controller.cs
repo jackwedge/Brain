@@ -67,35 +67,35 @@ public class walkcycle2controller : MonoBehaviour {
 				SR.flipX = true;
 			}
 
-			if (Input.GetKey (KeyCode.UpArrow)) {
-				Vector3 pos = transform.position;
-				rb.MovePosition ((Vector2)transform.position + new Vector2 (0, 0.03f));
-			//	transform.position = pos;
-				walking = true;
-
-				//	transform.position.x += 1;
-
-
-			}
-
-			if (Input.GetKey (KeyCode.DownArrow)) {
-				Vector3 pos = transform.position;
-								rb.MovePosition ((Vector2)transform.position + new Vector2 (0, -.03f));
-			//	transform.position = pos;
-				walking = true;
+//			if (Input.GetKey (KeyCode.UpArrow)) {
+//				Vector3 pos = transform.position;
+//				rb.MovePosition ((Vector2)transform.position + new Vector2 (0, 0.03f));
+//			//	transform.position = pos;
+//				walking = true;
+//
+//				//	transform.position.x += 1;
 
 
 			}
 
-			if (!Input.anyKey) {
-				walking = false;
-			}
-
+//			if (Input.GetKey (KeyCode.DownArrow)) {
+//				Vector3 pos = transform.position;
+//								rb.MovePosition ((Vector2)transform.position + new Vector2 (0, -.03f));
+//			//	transform.position = pos;
+//				walking = true;
+//
+//
+//			}
+//
+//			if (!Input.anyKey) {
+//				walking = false;
+//			}
+	
 			anim.SetBool ("walking", walking);
-		}
-
-
-
 
 	}
+
+
+
+
 }

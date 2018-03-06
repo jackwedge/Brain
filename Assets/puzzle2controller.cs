@@ -34,6 +34,8 @@ public class puzzle2controller : MonoBehaviour {
 
 
 
+
+
 		
 	}
 

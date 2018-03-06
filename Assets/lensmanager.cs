@@ -35,11 +35,12 @@ Sprite lens1sprite;
 		string lens1Name = lens1sprite.name;
 		string lens2Name = lens2sprite.name;
 		string lens3Name = lens3sprite.name;
-
+		Debug.Log (lens1Name);
 
 		if (lens1Name.Equals ("eyeball puzzle0049") && lens2Name.Equals ("eyeball puzzle0052") && lens3Name.Equals ("eyeball puzzle0097") && cam.iseyeballpov){
-			Debug.Log ("this works");
+	
 			youreawinner = true;
+			Debug.Log ("YOUREAWINNERPLSWORK");
 
 			}
 }
