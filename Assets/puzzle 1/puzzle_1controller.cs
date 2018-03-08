@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class puzzle_1controller : MonoBehaviour {
 
+
+
+
+
+	public 	IEnumerator delay (float duration, int tempstate)
+	{
+		yield return new WaitForSeconds (duration);
+	
+		MAINCAMERA.Me.state = tempstate;
+
+	}
+
 	int currentNumber=1;
 	public	puzzle_1buttoncontroller[] buttoncontrollers;
 
@@ -34,6 +46,16 @@ public class puzzle_1controller : MonoBehaviour {
 		//	MAINCAMERA.Me.state == 8  && Input.GetMouseButtonDown (0)) {
 
 				MAINCAMERA.Me.state = 7;
+
+			StartCoroutine(delay(2,9));
+
+			StartCoroutine(delay(3,10));
+
+				
+
+
+
+
 		//	transform.position = welcome2brainposition;
 
 			

@@ -15,7 +15,10 @@ public class MAINCAMERA : MonoBehaviour
 	public Vector3 youareeatenposition;
 	public Vector3 welcome2brainposition;
 	public Vector3 Puzzle2position;
+	public Vector3 dooropening;
+	public Vector3 Doorisopen;
 	public Vector3 Puzzle2solvedposition;
+	public Vector3 eyeballsocket;
 	public AudioClip StartSound;
 	public AudioSource Sound;
 
@@ -57,11 +60,11 @@ public class MAINCAMERA : MonoBehaviour
 
 
 
-IEnumerator delay (float duration)
+	public 	IEnumerator delay (float duration, int tempstate)
 {
 yield return new WaitForSeconds (duration);
 	transform.position = treeposition;
-	state = 1;
+		state = tempstate;
 
 }
 
@@ -83,7 +86,8 @@ yield return new WaitForSeconds (duration);
 
 				BrainAnim.SetActive (true);
 
-			StartCoroutine(delay(3));
+				StartCoroutine(delay(3,1));
+			
 
 			}
 
@@ -146,8 +150,41 @@ yield return new WaitForSeconds (duration);
 
 		if (state==7){
 			transform.position= welcome2brainposition;
-			SceneManager.LoadScene ("PUZZLE 2");
+		//	SceneManager.LoadScene ("PUZZLE 2");
 		}
+
+
+
+
+		if (state == 9) {
+			transform.position = dooropening;
+		}
+
+		if (state == 10) {
+			transform.position = Doorisopen;
+		}
+
+
+		if (state == 11) {
+			transform.position = eyeballsocket;
+		}
+
+
+
+		if (Input.GetKeyDown (KeyCode.F)){
+			state=11;
+		}
+
+
+		if (Input.GetKeyDown (KeyCode.D)){
+			state=5;
+		}
+
+
+
+
+
+
 
 //		if (state == 8) {
 //			if (Input.GetKeyDown (KeyCode.Space))
@@ -159,6 +196,9 @@ yield return new WaitForSeconds (duration);
 //			transform.position = welcome2brainposition;
 //			state = 7;
 		}
+
+
+
 
 
 
