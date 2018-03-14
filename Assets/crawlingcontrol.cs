@@ -61,8 +61,9 @@ public class crawlingcontrol : MonoBehaviour {
 
 
 
-		if (bubblemangoing.transform.position.x > 20) {
+		if (bubblemangoing.transform.position.x > 30) {
 			Debug.Log ("YIPPPIE");
+	
 
 
 
