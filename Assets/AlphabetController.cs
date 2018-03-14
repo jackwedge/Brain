@@ -10,7 +10,7 @@ public class AlphabetController : MonoBehaviour {
 	int alphabet;
 	int pressedtimes;
 	int lastkey;
-	string answer= "VESELKA" ;
+	string answer= "CAPSIZE" ;
 
 	public string[] currentletters = new string[7];
 
