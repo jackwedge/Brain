@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AlphabetController : MonoBehaviour {
 
+	public cameracontrollerpuzzle3 camera3;
 
 	public Sprite[] Alphabetsprites;
 	public SpriteRenderer AlphabetSpriterenderer;
@@ -213,6 +214,14 @@ public class AlphabetController : MonoBehaviour {
 
 		if (currentanswer == answer) {
 			Debug.Log ("YOU WIN");
+
+			camera3.transform.position = camera3.musicmouthpoisiton;
+			camera3.state = 3;
+
+
+
+
+
 		}
 		
 	//AlphabetSpriterenderer.sprite = Alphabetsprites [alphabet];
