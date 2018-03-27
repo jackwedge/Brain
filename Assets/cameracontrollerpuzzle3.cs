@@ -11,6 +11,7 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 	public Vector3 musicmouthpoisiton;
 
 	public int state = 0;
+
 //	public static MAINCAMERA Me;
 	public Camera cam;
 
@@ -19,8 +20,10 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		state = 0;
 
+
+
+	
 		cam.enabled = true;
 	}
 
@@ -38,10 +41,16 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-			if (state == 0) {
-				transform.position = intenstinesposition;
 
-			}
+
+
+
+
+
+		if (state == 0) {
+			transform.position = intenstinesposition;
+
+		}
 
 
 		if (state == 1) {
@@ -51,11 +60,25 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 
 		if (state==2) {
 			transform.position = pianopuzzleposition;
-}
+		}
 
 		if (state==3) {
 			transform.position = musicmouthpoisiton;
-	}
+		}
+
+
+		if (state == 4) {
+			transform.position = standontongueposition;
+		}
+
+		//state = 0;
+
+
+
+		if (Input.GetKeyDown (KeyCode.Q)){
+			state = 1;
+		}
+
 
 
 	}

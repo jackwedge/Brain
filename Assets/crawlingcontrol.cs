@@ -9,6 +9,8 @@ public class crawlingcontrol : MonoBehaviour {
 	public Sprite [] mysprites;
 	public crawlingcontrol bubblemangoing;
 
+
+
 	float timer;
 
 	float waittime =0.1f;
@@ -22,12 +24,12 @@ public class crawlingcontrol : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+//
 		if (timer > 0) {
 			timer -= Time.deltaTime;
 		}
 
-		if (MAINCAMERA.Me.state == 11 && Input.GetKey (KeyCode.RightArrow) && timer<=0) {
+		if (MAINCAMERA.Me.state == 11 && Input.GetKey (KeyCode.RightArrow) && timer <= 0) {
 			crawlingbubblemanSpriterenderer.sprite = mysprites [interval];
 			interval++;
 
@@ -37,14 +39,24 @@ public class crawlingcontrol : MonoBehaviour {
 			}
 
 
+
+
+
 			timer += waittime;
 
+
+			if (interval == 48) {
+				Debug.Log ("changinglocations");
+			}
+
+
+		
 
 
 
 		}
 
-		if (MAINCAMERA.Me.state == 11 && Input.GetKey (KeyCode.LeftArrow) && timer<=0) {
+		if (MAINCAMERA.Me.state == 11 && Input.GetKey (KeyCode.LeftArrow) && timer <= 0) {
 			crawlingbubblemanSpriterenderer.sprite = mysprites [interval];
 
 			interval--;
@@ -64,15 +76,12 @@ public class crawlingcontrol : MonoBehaviour {
 		if (bubblemangoing.transform.position.x > 30) {
 			Debug.Log ("YIPPPIE");
 	
-
-
-
-	
-		
+		}
 	}
 
-		
+
+
 
 
 }
-}
+

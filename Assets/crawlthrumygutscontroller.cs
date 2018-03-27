@@ -9,6 +9,9 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 	public SpriteRenderer bubblemaningutSpriterenderer;
 	public Sprite [] mysprites;
 	public crawlthrumygutscontroller bubblemanwiggling;
+	public cameracontrollerpuzzle3 camera3;
+
+
 
 	//public int state = 0;
 
@@ -24,27 +27,45 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		int state = 0;
+	
 
+			
+		
 	}
 
 
 	void Update () {
 
-		var thisState = GameObject.Find ("Main Camera").GetComponent<cameracontrollerpuzzle3> ().state;
 
+		if (camera3.transform.position != camera3.intenstinesposition) {
 
+			return;
+		}
+			
+			
 		if (timer > 0) {
 			timer -= Time.deltaTime;
 		}
 
-		if (thisState == 0 &&Input.GetKey (KeyCode.RightArrow) && timer<=0) {
+		if (Input.GetKey (KeyCode.RightArrow) && timer<=0) {
 			bubblemaningutSpriterenderer.sprite = mysprites [interval];
 			interval++;
 
 
 			if (interval >= mysprites.Length) {
 				interval = mysprites.Length - 1;
+
+
+				if (interval == 129) {
+
+					camera3.state = 1;
+					//camera3.transform.position = camera3.standontongueposition;
+
+				
+
+
+					//Debug.Log ("comeuptomymouth");
+				}
 			}
 
 
@@ -55,7 +76,7 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 
 		}
 
-		if (thisState == 0 &&Input.GetKey (KeyCode.LeftArrow) && timer<=0) {
+		if (Input.GetKey (KeyCode.LeftArrow) && timer<=0) {
 			bubblemaningutSpriterenderer.sprite = mysprites [interval];
 
 			interval--;
