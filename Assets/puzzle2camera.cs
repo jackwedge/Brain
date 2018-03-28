@@ -96,8 +96,14 @@ public class puzzle2camera : MonoBehaviour
 		state = 2;
 
 
+		StartCoroutine (delay (8));
+		SceneManager.LoadScene(2);
+
+
 
 	}
+
+
 }
 
 

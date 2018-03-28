@@ -5,7 +5,7 @@ using UnityEngine;
 public class AlphabetController : MonoBehaviour {
 
 	public cameracontrollerpuzzle3 camera3;
-
+	//using UnityEngine.SceneManagement;
 	public Sprite[] Alphabetsprites;
 	public SpriteRenderer AlphabetSpriterenderer;
 	int alphabet;
@@ -219,10 +219,9 @@ public class AlphabetController : MonoBehaviour {
 			camera3.state = 3;
 
 
-
-
-
 		}
+
+
 		
 	//AlphabetSpriterenderer.sprite = Alphabetsprites [alphabet];
 

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class cameracontrollerpuzzle3 : MonoBehaviour {
 
@@ -9,6 +11,7 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 	public Vector3 pianopuzzleposition;
 	public Vector3 standontongueposition;
 	public Vector3 musicmouthpoisiton;
+	public cameracontrollerpuzzle3 camera3;
 
 	public int state = 0;
 
@@ -58,11 +61,11 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 
 		}
 
-		if (state==2) {
+		if (state == 2) {
 			transform.position = pianopuzzleposition;
 		}
 
-		if (state==3) {
+		if (state == 3) {
 			transform.position = musicmouthpoisiton;
 		}
 
@@ -75,11 +78,49 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 
 
 
-		if (Input.GetKeyDown (KeyCode.Q)){
+		if (Input.GetKeyDown (KeyCode.Q)) {
 			state = 1;
+		}
+
+		//this is toggling between piano puzzle and standing on tongue position with space bar
+	
+		if (state == 2) {
+
+			if (Input.GetKeyDown ("space")) {
+
+			
+				state = 4;
+			
+
+			}
+		}
+
+		else if (state == 4) {
+			
+		
+			if (Input.GetKeyDown ("space")) {
+				//transform.position = Puzzle2position;
+				state = 2;
+
+
+			}
+		}
+
+		//you need to set up a timer here
+		if (state==3){
+
+			SceneManager.LoadScene(3);
+
+
 		}
 
 
 
+	
+
+
 	}
+
+
 }
+
