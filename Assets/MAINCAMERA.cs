@@ -68,8 +68,11 @@ yield return new WaitForSeconds (duration);
 
 }
 
-	void Update ()
-	{
+	void Update ()	{
+
+
+
+
 
 		Debug.Log ("State: " + state);
 		
