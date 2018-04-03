@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class endingcameracontroller : MonoBehaviour {
+	float timer;
 	
 	public Vector3 myskinisunravelingrposition;
 	public Vector3 skeletonfallsoverrposition;
@@ -18,6 +19,15 @@ public class endingcameracontroller : MonoBehaviour {
 	void Start () {
 		
 	}
+
+
+	public 	IEnumerator delay (float duration, int tempstate)
+	{
+		yield return new WaitForSeconds (duration);
+		transform.position = myskinisunravelingrposition;
+		state = tempstate;
+
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,15 +35,25 @@ public class endingcameracontroller : MonoBehaviour {
 
 		if (state == 0) {
 			transform.position = myskinisunravelingrposition;
+				timer += Time.deltaTime;
+				if (timer > 6) {
+				transform.position = skeletonfallsoverrposition;
+					state = 1;
+				}
+			}
 
-		}
 
 
 
 
-		if (state == 1) {
+
+	if (state == 1) {
 			transform.position = skeletonfallsoverrposition;
-
+			timer += Time.deltaTime;
+			if (timer > 12) {
+				transform.position = runoutofskullrposition;
+				state = 2;
+			}
 		}
 
 		if (state == 2) {

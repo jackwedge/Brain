@@ -58,53 +58,71 @@ public class puzzle2camera : MonoBehaviour
 			if (Input.GetKeyDown ("space")) {
 				//transform.position = Puzzle2position;
 				state = 0;
-			
-		
 			}
 		}
 
-		if (state == 2) {
+		else if (state == 2) {
 			transform.position = Puzzle2lookoutside; 
+			iseyeballpov = true;
+		
+			//Start coroutine again for 8 seconds
+			StartCoroutine(delay(6, 4));
 		}
-
-
-
-
-		if (state == 3) {
+		else if (state == 3) {
 			transform.position = gothrougheyesocket;
 		}
 
+		else if (state == 4) {
+			SceneManager.LoadScene(2);
+		}
 
+		// if puzzle is correct
 		if (manager.youreawinner && iseyeballpov){
 			Debug.Log ("happydays");
-			StartCoroutine(delay(3));
+			StartCoroutine(delay(3, 2));
 
 		}
 
 
 
+
+
 	}
 
 
 
-	IEnumerator delay (float duration)
+	IEnumerator delay (float duration, int newState)
 	{
 		//Debug.Log ("startingdelay");
 		yield return new WaitForSeconds (duration);
-		iseyeballpov = true;
-		transform.position = Puzzle2lookoutside;
-		state = 2;
+		state = newState;
 
 
-		StartCoroutine (delay (8));
-		SceneManager.LoadScene(2);
+		
+		//StartCoroutine (delay (8)); find another place to start this coroutine
+
 
 
 
 	}
 
 
+
+//	void SwitchStates(){
+//
+//		switch (state) {
+//		case 0:
+//			//set camera to x
+//			break;
+//		case 1:
+//			// set camera 
+//			break;
+//
+//		}
+//	}
 }
+
+
 
 
 
