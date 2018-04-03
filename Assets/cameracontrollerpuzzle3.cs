@@ -109,7 +109,7 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 		//you need to set up a timer here
 		if (state==3){
 
-			SceneManager.LoadScene(3);
+			SceneManager.LoadScene(4);
 
 
 		}

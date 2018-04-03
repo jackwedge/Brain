@@ -7,6 +7,7 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 	public SpriteRenderer SR;
 	public bool walking = false;
 	public Animator anim;
+	public Rigidbody2D rigidbody;
 
 
 
@@ -22,29 +23,35 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		Vector2 speed = Vector2.zero;
+
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			Vector3 pos = transform.position;
-			pos.x += 0.05f;
-			transform.position = pos;
+		//	Vector3 pos = transform.position;
+		//	pos.x += 0.08f;
+			speed.x = +10f;
+
+		//	transform.position = pos;
 		//	walking = true;
 		//	SR.flipX = false;
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			Vector3 pos = transform.position;
-			pos.x += -0.05f;
-			transform.position = pos;
+			speed.x = -10f;
+//			Vector3 pos = transform.position;
+//			pos.x += -0.08f;
+//			transform.position = pos;
 		//	walking = true;
 
 		//	SR.flipX = true;
 		}
 
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			Vector3 pos = transform.position;
-			pos.y += +0.05f;
-			transform.position = pos;
-		//	walking = true;
+			speed.y = +10f;
+//			Vector3 pos = transform.position;
+//			pos.y += +0.08f;
+//			transform.position = pos;
+//		//	walking = true;
 
 			//	transform.position.x += 1;
 
@@ -52,13 +59,17 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 		}
 
 		if (Input.GetKey (KeyCode.DownArrow)) {
-			Vector3 pos = transform.position;
-			pos.y += -0.05f;
-			transform.position = pos;
-		//	walking = true;
+			speed.y = -10f;
+//			Vector3 pos = transform.position;
+//			pos.y += -0.08f;
+//			transform.position = pos;
+//		//	walking = true;
 
 
 		}
+
+
+		rigidbody.velocity = speed;
 
 //		if (!Input.anyKey) {
 //			walking = false;

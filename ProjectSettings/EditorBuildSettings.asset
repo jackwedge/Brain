@@ -17,3 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SCENES/final maze.unity
     guid: d8257f62f3bb0489ca40449333348649
+  - enabled: 1
+    path: Assets/SCENES/outskirts of the center.unity
+    guid: bcc006eedfcb945f4b9b468ea6ccc553
+  - enabled: 1
+    path: Assets/SCENES/reincarnation.unity
+    guid: bdf6cb7667a694ef2a31d4942fb7b656
