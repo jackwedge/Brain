@@ -14,6 +14,8 @@ public class finalmazecamera : MonoBehaviour {
 	public Vector3 treegrowsrposition;
 	public Transform bubblemantraveling;
 
+	public GameObject entirebrain;
+
 	public int state = 0;
 
 
@@ -24,6 +26,14 @@ public class finalmazecamera : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown(KeyCode.Space)){
+			entirebrain.SetActive(!entirebrain.activeSelf);
+
+
+		}
+
+
 
 
 
@@ -37,4 +47,6 @@ public class finalmazecamera : MonoBehaviour {
 		transform.position=new Vector3(	transform.position.x,transform.position.y,-10);
 
 	}
+
+
 }
