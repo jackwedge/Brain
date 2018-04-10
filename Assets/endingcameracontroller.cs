@@ -11,6 +11,7 @@ public class endingcameracontroller : MonoBehaviour {
 	public Vector3 finalfieldrposition;
 	public Vector3 treegrowsrposition;
 	public Transform bubblemantraveling;
+	public Vector3 treegoodbyeposition;
 	public Camera cam;
 	public int state = 0;
 
@@ -50,7 +51,7 @@ public class endingcameracontroller : MonoBehaviour {
 	if (state == 1) {
 			transform.position = skeletonfallsoverrposition;
 			timer += Time.deltaTime;
-			if (timer > 12) {
+			if (timer > 10) {
 				transform.position = runoutofskullrposition;
 				state = 2;
 			}
@@ -68,6 +69,11 @@ public class endingcameracontroller : MonoBehaviour {
 		if (state == 4) {
 			transform.position = treegrowsrposition;
 
+		}
+
+
+		if (state == 5) {
+			transform.position = treegoodbyeposition;
 		}
 }
 }

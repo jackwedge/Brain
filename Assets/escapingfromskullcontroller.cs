@@ -10,11 +10,15 @@ public class escapingfromskullcontroller : MonoBehaviour {
 	public Vector3 finalfieldrposition;
 	public Vector3 treegrowsrposition;
 	public Transform bubblemantraveling;
+	public Vector3 treegoodbyeposition;
 	public Camera cam;
 	public SpriteRenderer escapefromskullSpriterenderer;
 	public Sprite [] mysprites;
 	public escapingfromskullcontroller bubblemanisfree;
 	public endingcameracontroller fincamera;
+
+	//public int state = 0;
+
 	//public Camera cam;
 
 	float timer;
@@ -24,6 +28,8 @@ public class escapingfromskullcontroller : MonoBehaviour {
 	int interval= 0;
 
 
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -31,6 +37,9 @@ public class escapingfromskullcontroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log ("updateforstage2");
+
+		if (fincamera.state == 2) {
 
 
 		if (timer > 0) {
@@ -38,7 +47,10 @@ public class escapingfromskullcontroller : MonoBehaviour {
 		}
 
 
+
+
 		if (Input.GetKey (KeyCode.RightArrow) && timer <= 0) {
+				Debug.Log ("runoutofeyesocket?");
 
 			if (interval < mysprites.Length) {
 				escapefromskullSpriterenderer.sprite = mysprites [interval];
@@ -66,6 +78,13 @@ public class escapingfromskullcontroller : MonoBehaviour {
 				fincamera.state = 3;
 				transform.position = finalfieldrposition;
 
+
+
+				timer += Time.deltaTime;
+					if (timer > 8) {
+						transform.position = treegoodbyeposition;
+				
+					}
 			}
 		}
 
@@ -97,5 +116,6 @@ public class escapingfromskullcontroller : MonoBehaviour {
 		
 	}
 
+}
 }
 }
