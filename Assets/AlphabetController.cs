@@ -184,6 +184,7 @@ public class AlphabetController : MonoBehaviour {
 
 		if (lastkey == 6) {
 			if (pressedtimes == 1) {
+				Debug.Log ("WILLTHISTURNRED???");
 				Debug.Log ("A");
 				currentletters [letterindex-1] = ("A");
 				AlphabetSpriterenderer.sprite = Alphabetsprites [0];
