@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7f8c5e29394e83add7ab4c2f6b555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxnumber: 0
+  boxnumber: 3
   whitebox: {fileID: 0}
   myboxnumber: 7
 --- !u!61 &165816921
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7f8c5e29394e83add7ab4c2f6b555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxnumber: 6
+  boxnumber: 0
   whitebox: {fileID: 582488076}
   myboxnumber: 1
 --- !u!212 &362815519
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7f8c5e29394e83add7ab4c2f6b555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxnumber: 3
+  boxnumber: 6
   whitebox: {fileID: 0}
   myboxnumber: 4
 --- !u!61 &582275944
@@ -1435,7 +1435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7f8c5e29394e83add7ab4c2f6b555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxnumber: 2
+  boxnumber: 4
   whitebox: {fileID: 0}
   myboxnumber: 5
 --- !u!61 &879036577
@@ -1646,7 +1646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7f8c5e29394e83add7ab4c2f6b555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxnumber: 4
+  boxnumber: 1
   whitebox: {fileID: 0}
   myboxnumber: 3
 --- !u!61 &983365096
@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab7f8c5e29394e83add7ab4c2f6b555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxnumber: 1
+  boxnumber: 2
   whitebox: {fileID: 0}
   myboxnumber: 6
 --- !u!212 &1013585852
@@ -3486,7 +3486,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1982989275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.53403, y: -0.7210026, z: 0}
+  m_LocalPosition: {x: -23.53403, y: -0.7210026, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
