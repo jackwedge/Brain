@@ -43,6 +43,22 @@ Sprite lens1sprite;
 			Debug.Log ("YOUREAWINNERPLSWORK");
 
 			}
+
+		else if (lens1Name.Equals ("eyeball puzzle0046") && lens2Name.Equals ("eyeball puzzle0055") && lens3Name.Equals ("eyeball puzzle0094") && cam.iseyeballpov){
+
+			youreawinner = true;
+			Debug.Log ("YOUREAWINNERPLSWORK");
+
+		}
+
+
+		else if (lens1Name.Equals ("eyeball puzzle0031") && lens2Name.Equals ("eyeball puzzle0070") && lens3Name.Equals ("eyeball puzzle0079") && cam.iseyeballpov){
+
+			youreawinner = true;
+			Debug.Log ("YOUREAWINNERPLSWORK");
+
+		}
+
 }
 }
  
