@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MAINCAMERA : MonoBehaviour
 {
+	
+	public GameObject button;
+
 	float timer;
 	//	bool starttimer;
 	public Vector3 fieldposition;
@@ -21,6 +25,7 @@ public class MAINCAMERA : MonoBehaviour
 	public Vector3 eyeballsocket;
 	public AudioClip StartSound;
 	public AudioSource Sound;
+
 
 	public bubblemaninfield guy;
 	public static MAINCAMERA Me;
@@ -70,11 +75,11 @@ yield return new WaitForSeconds (duration);
 
 	void Update ()	{
 
+		hideshowButton ();
 
 
 
-
-		Debug.Log ("State: " + state);
+//		Debug.Log ("State: " + state);
 		
 
 		if (state == 0) {
@@ -199,6 +204,18 @@ yield return new WaitForSeconds (duration);
 //			transform.position = welcome2brainposition;
 //			state = 7;
 		}
+
+	void hideshowButton() //This is where all the hint button stuff works, If you want to make changes it will be in here
+	{
+		if (transform.position == fieldposition || transform.position == treeposition || transform.position == welcome2brainposition) //add new locations here for hide show button
+		{
+			button.gameObject.SetActive(true); //when this scene is up, show the button
+		}
+		else
+		{
+			button.gameObject.SetActive(false);
+		}
+	}
 
 
 
