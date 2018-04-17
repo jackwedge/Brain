@@ -303,6 +303,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
   lens2: {fileID: 427727217}
   mylensnumber: 1
+  Puzzle2position: {x: 0, y: 0, z: 0}
+  Puzzle2solvedposition: {x: 0, y: 0, z: 0}
+  Puzzle2lookoutside: {x: 0, y: 0, z: 0}
+  gothrougheyesocket: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
+  camerababy: {fileID: 1463986282}
+  state: 0
 --- !u!4 &169562736
 Transform:
   m_ObjectHideFlags: 0
@@ -505,6 +512,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
   lens2: {fileID: 0}
   mylensnumber: 1
+  Puzzle2position: {x: 0, y: 0, z: 0}
+  Puzzle2solvedposition: {x: 0, y: 0, z: 0}
+  Puzzle2lookoutside: {x: 0, y: 0, z: 0}
+  gothrougheyesocket: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
+  camerababy: {fileID: 1463986282}
+  state: 0
 --- !u!58 &427727218
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -756,6 +770,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
   lens2: {fileID: 0}
   mylensnumber: 1
+  Puzzle2position: {x: 0, y: 0, z: 0}
+  Puzzle2solvedposition: {x: 0, y: 0, z: 0}
+  Puzzle2lookoutside: {x: 0, y: 0, z: 0}
+  gothrougheyesocket: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
+  camerababy: {fileID: 1463986282}
+  state: 0
 --- !u!58 &1079601842
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -856,6 +877,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
   lens2: {fileID: 1356767216}
   mylensnumber: 1
+  Puzzle2position: {x: 0, y: 0, z: 0}
+  Puzzle2solvedposition: {x: 0, y: 0, z: 0}
+  Puzzle2lookoutside: {x: 0, y: 0, z: 0}
+  gothrougheyesocket: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
+  camerababy: {fileID: 1463986282}
+  state: 0
 --- !u!212 &1271674434
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -969,6 +997,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
   lens2: {fileID: 0}
   mylensnumber: 1
+  Puzzle2position: {x: 0, y: 0, z: 0}
+  Puzzle2solvedposition: {x: 0, y: 0, z: 0}
+  Puzzle2lookoutside: {x: 0, y: 0, z: 0}
+  gothrougheyesocket: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
+  camerababy: {fileID: 1463986282}
+  state: 0
 --- !u!58 &1356767217
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1772,6 +1807,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
   lens2: {fileID: 1079601841}
   mylensnumber: 1
+  Puzzle2position: {x: 0, y: 0, z: 0}
+  Puzzle2solvedposition: {x: 0, y: 0, z: 0}
+  Puzzle2lookoutside: {x: 0, y: 0, z: 0}
+  gothrougheyesocket: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
+  camerababy: {fileID: 1463986282}
+  state: 0
 --- !u!1 &2097891699
 GameObject:
   m_ObjectHideFlags: 0

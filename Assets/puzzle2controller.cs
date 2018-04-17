@@ -13,6 +13,16 @@ public class puzzle2controller : MonoBehaviour {
 //	public Sprite[] currentlens3 = mysprites[7];
 	public int	mylensnumber=1;
 
+	public Vector3 Puzzle2position;
+	public Vector3 Puzzle2solvedposition;
+	public Vector3 Puzzle2lookoutside;
+	public Vector3 gothrougheyesocket;
+	public lensmanager manager;
+
+	public puzzle2camera camerababy;
+
+	public int state = 0;
+
 
 
 
@@ -32,7 +42,7 @@ public class puzzle2controller : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-
+	
 
 
 
@@ -42,15 +52,19 @@ public class puzzle2controller : MonoBehaviour {
 
 
 
+		
 	void OnMouseDown (){
-		lensSpriterenderer.sprite = mysprites [interval%8];
-		if (lens2 != null) {
-			lens2.lensSpriterenderer.sprite = mysprites [interval % 8];
-		}
+		if (camerababy.state == 0) {
+
+			lensSpriterenderer.sprite = mysprites [interval % 8];
+			if (lens2 != null) {
+				lens2.lensSpriterenderer.sprite = mysprites [interval % 8];
+			}
 			interval++;
-	
+		}
 
 	}
+
 
 }
 
