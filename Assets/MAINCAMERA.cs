@@ -8,6 +8,11 @@ public class MAINCAMERA : MonoBehaviour
 {
 	
 	public GameObject button;
+	public AudioSource musicsource;
+	public AudioSource bubblerap;
+	public AudioClip windchimes;
+	public AudioSource dissloveallletters;
+	public AudioClip dissolveletterssound;
 
 	float timer;
 	//	bool starttimer;
@@ -23,8 +28,7 @@ public class MAINCAMERA : MonoBehaviour
 	public Vector3 Doorisopen;
 	public Vector3 Puzzle2solvedposition;
 	public Vector3 eyeballsocket;
-	public AudioClip StartSound;
-	public AudioSource Sound;
+
 
 
 	public bubblemaninfield guy;
@@ -51,7 +55,7 @@ public class MAINCAMERA : MonoBehaviour
 	//state = 6;
 	
 		Me = this;
-		Sound.PlayOneShot (StartSound);
+		//Sound.PlayOneShot (StartSound);
 	}
 	
 	// Update is called once per frame
@@ -73,6 +77,9 @@ yield return new WaitForSeconds (duration);
 
 }
 
+
+
+
 	void Update ()	{
 
 		hideshowButton ();
@@ -83,8 +90,22 @@ yield return new WaitForSeconds (duration);
 		
 
 		if (state == 0) {
+
+			if (!musicsource.isPlaying) {
+				musicsource.PlayOneShot (windchimes);
+			}
+
+
+
+			
 			transform.position = titleposition;
+		
 			if (Input.GetMouseButton (0)) {
+
+				if (!dissloveallletters.isPlaying) {
+					dissloveallletters.PlayOneShot (dissolveletterssound);
+				}
+
 
 				Destroy (B);
 				Destroy (R);
@@ -100,12 +121,20 @@ yield return new WaitForSeconds (duration);
 			}
 
 
-//		} else if (state == 1) {
-//			if (Input.GetMouseButtonDown (0)) { 
-//				state = 2;
-//
-//			}
-		} else if (state == 2) {
+
+		} 
+
+
+
+		if ( state != 0) {
+
+			musicsource.Stop(); 
+
+		}
+
+
+
+	if (state == 2) {
 			timer += Time.deltaTime;
 			if (timer > 5) {
 				transform.position = fieldposition;

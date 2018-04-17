@@ -6,6 +6,12 @@ public class BCONTROLLER : MonoBehaviour {
 	public Animator anim;
 	public SpriteRenderer SR;
 
+	public AudioSource bubblerap;
+
+	public AudioClip lettersound;
+
+
+
 	bool dissolve = false;
 
 	// Use this for initialization
@@ -36,6 +42,15 @@ public class BCONTROLLER : MonoBehaviour {
 		{
 			//If your mouse hovers over the GameObject with the script attached, output this message
 		dissolve=true;
+
+		if (!bubblerap.isPlaying) {
+			bubblerap.PlayOneShot (lettersound);
+		}
+
+	
+
+
+
 		}
 
 		void OnMouseExit()
