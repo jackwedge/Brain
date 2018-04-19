@@ -13,6 +13,8 @@ public class MAINCAMERA : MonoBehaviour
 	public AudioClip windchimes;
 	public AudioSource dissloveallletters;
 	public AudioClip dissolveletterssound;
+	public AudioSource hellotree;
+	public AudioClip hellotreesound;
 
 	float timer;
 	//	bool starttimer;
@@ -105,6 +107,7 @@ yield return new WaitForSeconds (duration);
 				if (!dissloveallletters.isPlaying) {
 					dissloveallletters.PlayOneShot (dissolveletterssound);
 				}
+			
 
 
 				Destroy (B);
@@ -115,107 +118,118 @@ yield return new WaitForSeconds (duration);
 
 				BrainAnim.SetActive (true);
 
-				StartCoroutine(delay(3,1));
+				StartCoroutine (delay (3, 1));
 			
 
 			}
 
 
 
-		} 
 
 
 
-		if ( state != 0) {
-
-			musicsource.Stop(); 
-
-		}
 
 
 
-	if (state == 2) {
-			timer += Time.deltaTime;
-			if (timer > 5) {
-				transform.position = fieldposition;
-				state = 3;
-			}
-		}
-		if (state == 3) {
-			timer = 0;
-			if (guy.transform.position.x > 30|| guy.transform.position.x < 11|| 
-				guy.transform.position.y > 5|| guy.transform.position.y < -5) {
-				
-				state = 4;
 
+			if (state != 0) {
 
-				transform.position = trapposition;
-				guy.transform.position = titleposition;
-
+				musicsource.Stop (); 
 
 			}
-
-		}
 
 
 	
-				if (state ==5) {
-			transform.position=trapposition;
-			Debug.Log ("STATE 5: " + timer);
-					timer += Time.deltaTime;
-					if (timer > 3) {
-						transform.position = youareeatenposition;
-						state = 6;
-			timer = 0;
-					}
+
+
+
+
+		
+
+
+
+			if (state == 2) {
+				timer += Time.deltaTime;
+				if (timer > 5) {
+					transform.position = fieldposition;
+					state = 3;
+				}
+			}
+			if (state == 3) {
+				timer = 0;
+				if (guy.transform.position.x > 30 || guy.transform.position.x < 11 ||
+				   guy.transform.position.y > 5 || guy.transform.position.y < -5) {
+				
+					state = 4;
+
+
+					transform.position = trapposition;
+					guy.transform.position = titleposition;
+
+
+				}
+
+			}
+
+
+	
+			if (state == 5) {
+				transform.position = trapposition;
+				Debug.Log ("STATE 5: " + timer);
+				timer += Time.deltaTime;
+				if (timer > 3) {
+					transform.position = youareeatenposition;
+					state = 6;
+					timer = 0;
+				}
 				
 			}
 
-		if (state == 6) {
-			timer += Time.deltaTime;
-			if (timer > 3) {
-				transform.position = welcome2brainposition;
-				state = 7;
+			if (state == 6) {
+				timer += Time.deltaTime;
+				if (timer > 3) {
+					transform.position = welcome2brainposition;
+					state = 7;
+				}
 			}
-		}
 
-	if (state == 8) {
-		transform.position = puzzle1position;
+			if (state == 8) {
+				transform.position = puzzle1position;
 
-		}
+			}
 
 
-		if (state==7){
-			transform.position= welcome2brainposition;
-		//	SceneManager.LoadScene ("PUZZLE 2");
-		}
-
+			if (state == 7) {
+				transform.position = welcome2brainposition;
+				//	SceneManager.LoadScene ("PUZZLE 2");
+			}
 
 
 
-		if (state == 9) {
-			transform.position = dooropening;
-		}
 
-		if (state == 10) {
-			transform.position = Doorisopen;
-		}
+			if (state == 9) {
+				transform.position = dooropening;
+			}
 
-
-		if (state == 11) {
-			transform.position = eyeballsocket;
-		}
+			if (state == 10) {
+				transform.position = Doorisopen;
+			}
 
 
+			if (state == 11) {
+				transform.position = eyeballsocket;
+			}
 
-		if (Input.GetKeyDown (KeyCode.F)){
-			state=11;
-		}
 
 
-		if (Input.GetKeyDown (KeyCode.D)){
-			state=5;
-		}
+			if (Input.GetKeyDown (KeyCode.F)) {
+				state = 11;
+			}
+
+
+			if (Input.GetKeyDown (KeyCode.D)) {
+				state = 5;
+			}
 
 
 
@@ -233,6 +247,7 @@ yield return new WaitForSeconds (duration);
 //			transform.position = welcome2brainposition;
 //			state = 7;
 		}
+	}
 
 	void hideshowButton() //This is where all the hint button stuff works, If you want to make changes it will be in here
 	{
@@ -249,6 +264,7 @@ yield return new WaitForSeconds (duration);
 
 
 
+	}
 
 
-		}
+
