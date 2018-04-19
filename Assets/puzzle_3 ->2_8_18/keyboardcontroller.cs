@@ -16,6 +16,8 @@ public class keyboardcontroller : MonoBehaviour {
 	public SpriteRenderer AlphabetSpriterenderer;
 
 
+
+
 	void Start () {
 		keyboardSpriterenderer = GetComponent<SpriteRenderer> ();
 		key_14 = keyboardSpriterenderer.sprite;
@@ -48,6 +50,8 @@ public class keyboardcontroller : MonoBehaviour {
 	}
 
 	public void MousePressed(int keynumber){
+
+	
 		keyboardSpriterenderer.sprite = keyboardsprites [keynumber];
 
 
@@ -56,10 +60,13 @@ public class keyboardcontroller : MonoBehaviour {
 
 		LetterSelecter.ChangeLetter (keynumber % 7);
 
-
 	
 	
 	}
+
+
+
+
 }
 
 

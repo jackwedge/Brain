@@ -14,7 +14,10 @@ public class puzzle2camera : MonoBehaviour
 	public Vector3 Puzzle2lookoutside;
 	public Vector3 gothrougheyesocket;
 	public lensmanager manager;
-
+	public AudioClip underwaterbreathsound;
+	public AudioSource underwaterbreathsource;
+	public AudioClip backwardsbreathingsound;
+	public AudioSource backwardsbreathingsource;
 
 	public int state = 0;
 
@@ -25,12 +28,17 @@ public class puzzle2camera : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		
 		state = 0;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+
+
+
+
 
 		//	if (Input.GetKeyDown("space"))
 		//		print("dogman grows into a planet giant");
@@ -39,6 +47,17 @@ public class puzzle2camera : MonoBehaviour
 
 
 		if (state == 0) {
+
+//			if (!underwaterbreathsource.isPlaying) {
+//				underwaterbreathsource.PlayOneShot (underwaterbreathsound);
+//			}
+
+			if (!backwardsbreathingsource.isPlaying) {
+				backwardsbreathingsource.PlayOneShot (backwardsbreathingsound);
+			}
+
+
+
 			transform.position = Puzzle2position;
 			if (Input.GetKeyDown ("space")) {
 				

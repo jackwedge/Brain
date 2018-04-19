@@ -5,6 +5,8 @@ using UnityEngine;
 public class youaretrapped : MonoBehaviour {
 	public GameObject forklift;
 	public walkcycle bubbleman;
+	public AudioSource walkinginfieldsource;
+	public AudioClip walkinginfieldsound;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +21,9 @@ public class youaretrapped : MonoBehaviour {
 		Debug.Log ("a");
 		if(col.gameObject.GetComponent<walkcycle>() == bubbleman)
 		{
+
+		//	walkinginfieldsource.clip = walkinginfieldsound;
+			walkinginfieldsource.Stop ();
 			Debug.Log ("areuworking");
 			Destroy(col.gameObject);
 			forklift.gameObject.SetActive (true);

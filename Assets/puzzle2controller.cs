@@ -7,6 +7,9 @@ public class puzzle2controller : MonoBehaviour {
 	public Sprite [] mysprites;
 	public puzzle2controller lens2;
 
+	public AudioClip turnlenssound;
+	public AudioSource turnlenssource;
+
 
 //	public Sprite[] currentlens1 = mysprites[7];
 //	public Sprite[] currentlens2 = mysprites[7];
@@ -54,7 +57,15 @@ public class puzzle2controller : MonoBehaviour {
 
 		
 	void OnMouseDown (){
+
+
+
 		if (camerababy.state == 0) {
+
+			if (!turnlenssource.isPlaying) {
+				turnlenssource.PlayOneShot (turnlenssound);
+			}
+
 
 			lensSpriterenderer.sprite = mysprites [interval % 8];
 			if (lens2 != null) {

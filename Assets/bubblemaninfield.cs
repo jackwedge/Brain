@@ -8,6 +8,8 @@ public class bubblemaninfield : MonoBehaviour {
 	public Animator anim;
 	public SpriteRenderer SR;
 	bool walking = false;
+	public AudioSource walkinginfieldsource;
+	public AudioClip walkinginfieldsound;
 
 	public MAINCAMERA cameraman;
 
@@ -15,15 +17,28 @@ public class bubblemaninfield : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		SR = GetComponent<SpriteRenderer> ();
+		//AudioSource = GetComponent < AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
+
+			
+
 		if (cameraman.state == 3) {
 
 			//bool walking = false;
 			if (Input.GetKey (KeyCode.RightArrow)) {
+
+				if (!walkinginfieldsource.isPlaying) { // == means "is equal to?"
+
+					walkinginfieldsource.clip = walkinginfieldsound;
+					walkinginfieldsource.Play ();
+
+
+				}
+
 				Vector3 pos = transform.position;
 				pos.x += 0.04f;
 				transform.position = pos;
@@ -32,7 +47,24 @@ public class bubblemaninfield : MonoBehaviour {
 				transform.eulerAngles = new Vector3 (0, 0, -90);
 			}
 
+			if (Input.GetKeyUp (KeyCode.RightArrow)) {
+				walkinginfieldsource.clip = walkinginfieldsound;
+				walkinginfieldsource.Stop ();
+
+
+			}
+
+
+
 			if (Input.GetKey (KeyCode.LeftArrow)) {
+
+				if (!walkinginfieldsource.isPlaying) { // == means "is equal to?"
+
+					walkinginfieldsource.clip = walkinginfieldsound;
+					walkinginfieldsource.Play ();
+
+
+				}
 				Vector3 pos = transform.position;
 				pos.x += -0.04f;
 				transform.position = pos;
@@ -41,7 +73,24 @@ public class bubblemaninfield : MonoBehaviour {
 				transform.eulerAngles = new Vector3 (0, 0, 90);
 			}
 
+
+			if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+				walkinginfieldsource.clip = walkinginfieldsound;
+				walkinginfieldsource.Stop ();
+
+
+			}
+
 			if (Input.GetKey (KeyCode.UpArrow)) {
+
+				if (!walkinginfieldsource.isPlaying) { // == means "is equal to?"
+
+					walkinginfieldsource.clip = walkinginfieldsound;
+					walkinginfieldsource.Play ();
+
+
+				}
+
 				Vector3 pos = transform.position;
 				pos.y += +0.04f;
 				transform.position = pos;
@@ -52,7 +101,25 @@ public class bubblemaninfield : MonoBehaviour {
 
 			}
 
+			if (Input.GetKeyUp (KeyCode.UpArrow)) {
+				walkinginfieldsource.clip = walkinginfieldsound;
+				walkinginfieldsource.Stop ();
+
+
+			}
+
+
+
 			if (Input.GetKey (KeyCode.DownArrow)) {
+
+				if (!walkinginfieldsource.isPlaying) { // == means "is equal to?"
+
+					walkinginfieldsource.clip = walkinginfieldsound;
+					walkinginfieldsource.Play ();
+
+
+				}
+
 				Vector3 pos = transform.position;
 				pos.y += -0.04f;
 				transform.position = pos;
@@ -60,6 +127,15 @@ public class bubblemaninfield : MonoBehaviour {
 				transform.eulerAngles = new Vector3 (0, 0, 180);
 
 			}
+
+			if (Input.GetKeyUp (KeyCode.DownArrow)) {
+				walkinginfieldsource.clip = walkinginfieldsound;
+				walkinginfieldsource.Stop ();
+
+
+			}
+
+
 
 			if (!Input.anyKey) {
 				walking = false;
@@ -73,6 +149,11 @@ public class bubblemaninfield : MonoBehaviour {
 			anim.SetBool ("walking", walking);
 
 			
+		}
+
+		if (cameraman.state != 3) {
+			walkinginfieldsource.clip = walkinginfieldsound;
+			walkinginfieldsource.Stop ();
 		}
 
 

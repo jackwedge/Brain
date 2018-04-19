@@ -10,6 +10,10 @@ public class walkcycle : MonoBehaviour {
 
 	public MAINCAMERA cameraman;
 
+	public AudioSource walkinginfieldsource;
+	public AudioClip walkinginfieldsound;
+
+
 
 
 	// Use this for initialization
@@ -28,11 +32,30 @@ public class walkcycle : MonoBehaviour {
 		
 
 			if (Input.GetKey (KeyCode.RightArrow)) {
+				if (!walkinginfieldsource.isPlaying) { // == means "is equal to?"
+
+					walkinginfieldsource.clip = walkinginfieldsound;
+					walkinginfieldsource.Play ();
+
+
+				}
+
+
+
+
 				Vector3 pos = transform.position;
 				pos.x += 0.03f;
 				transform.position = pos;
 				walking = true;
 				SR.flipX = false;
+			}
+
+
+			if (Input.GetKeyUp (KeyCode.RightArrow)) {
+				walkinginfieldsource.clip = walkinginfieldsound;
+				walkinginfieldsource.Stop ();
+
+
 			}
 
 			if (Input.GetKey (KeyCode.LeftArrow)) {

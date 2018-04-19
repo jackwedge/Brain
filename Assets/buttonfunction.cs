@@ -36,6 +36,16 @@ public class buttonfunction : MonoBehaviour {
 		{
 			helpTextBox.GetComponent<Image>().sprite = brainhelp;
 		}
+
+
+		if(	Input.GetMouseButtonDown (0)) { 
+			
+
+			helpTextBox.gameObject.SetActive(false);
+			hide = true;
+			Debug.Log("not here");
+		}
+
 	}
 
 
@@ -47,12 +57,6 @@ public class buttonfunction : MonoBehaviour {
 			helpTextBox.gameObject.SetActive(true);
 			hide = false;
 			Debug.Log("here");
-		}
-		else if (hide == false)
-		{
-			helpTextBox.gameObject.SetActive(false);
-			hide = true;
-			Debug.Log("not here");
 		}
 
 	}

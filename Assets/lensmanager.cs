@@ -9,6 +9,8 @@ public class lensmanager : MonoBehaviour {
 	public puzzle2controller lens3 ;
 	public puzzle2camera cam;
 
+
+
 	public bool youreawinner = false;
 
 Sprite lens1sprite;

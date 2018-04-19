@@ -7,6 +7,8 @@ public class walkcyclemaincontroller : MonoBehaviour {
 	//bool turn = true;
 	public Animator anim;
 	public SpriteRenderer SR;
+	public AudioSource walkinginfieldsource;
+	public AudioClip walkinginfieldsound;
 
 
 	// Use this for initialization
@@ -28,6 +30,11 @@ public class walkcyclemaincontroller : MonoBehaviour {
 			walking = true;
 			SR.flipX = true;
 			transform.eulerAngles = new Vector3 (0, 0, 0);
+
+
+		
+
+		
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
