@@ -13,8 +13,9 @@ public class MAINCAMERA : MonoBehaviour
 	public AudioClip windchimes;
 	public AudioSource dissloveallletters;
 	public AudioClip dissolveletterssound;
-//	public AudioSource walkinginfieldsource;
-//	public AudioClip walkinginfieldsound;
+
+	public AudioSource walkinginfieldsource;
+	public AudioClip walkinginfieldsound;
 
 	public AudioClip hellotreesound;
 	public AudioSource hellotreesource;
@@ -55,6 +56,9 @@ public class MAINCAMERA : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+
+
+
 	//	AudioSource = GetComponent < AudioSource> ();
 
 	//state = 6;
@@ -100,6 +104,11 @@ yield return new WaitForSeconds (duration);
 
 
 	void Update ()	{
+
+
+	
+
+
 
 		hideshowButton ();
 
@@ -158,11 +167,6 @@ yield return new WaitForSeconds (duration);
 
 
 
-		if (MAINCAMERA.Me.state == 1) {
-
-
-
-		}
 
 
 
@@ -199,8 +203,16 @@ yield return new WaitForSeconds (duration);
 		}
 
 
+
+
 	
 				if (state ==5) {
+
+			walkinginfieldsource.clip = walkinginfieldsound;
+			walkinginfieldsource.Stop ();
+
+
+		
 
 			transform.position=trapposition;
 			Debug.Log ("STATE 5: " + timer);
@@ -212,6 +224,14 @@ yield return new WaitForSeconds (duration);
 					}
 				
 			}
+
+
+
+
+
+
+
+
 
 		if (state == 6) {
 			hellotreesource.Stop (); 
@@ -275,6 +295,11 @@ yield return new WaitForSeconds (duration);
 //		
 //			transform.position = welcome2brainposition;
 //			state = 7;
+
+
+	
+
+
 		}
 
 	void hideshowButton() //This is where all the hint button stuff works, If you want to make changes it will be in here

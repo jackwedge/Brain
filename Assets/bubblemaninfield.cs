@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
+
 public class bubblemaninfield : MonoBehaviour {
 
+	public GameObject forklift;
 	public Animator anim;
 	public SpriteRenderer SR;
 	bool walking = false;
 	public AudioSource walkinginfieldsource;
 	public AudioClip walkinginfieldsound;
+
+	public AudioSource ouchsoundsource;
+	public AudioClip ouchsoundclip;
+
 
 	public MAINCAMERA cameraman;
 

@@ -52,13 +52,23 @@ public class walkcycle : MonoBehaviour {
 
 
 			if (Input.GetKeyUp (KeyCode.RightArrow)) {
-				walkinginfieldsource.clip = walkinginfieldsound;
-				walkinginfieldsource.Stop ();
+				if (walkinginfieldsource.isPlaying) {
 
 
+					walkinginfieldsource.clip = walkinginfieldsound;
+					walkinginfieldsource.Stop ();
+
+				}
 			}
 
+
+
 			if (Input.GetKey (KeyCode.LeftArrow)) {
+				if (!walkinginfieldsource.isPlaying) { // == means "is equal to?"
+					walkinginfieldsource.clip = walkinginfieldsound;
+					walkinginfieldsource.Play ();
+				}
+
 				Vector3 pos = transform.position;
 				pos.x += -0.03f;
 				transform.position = pos;
@@ -66,6 +76,15 @@ public class walkcycle : MonoBehaviour {
 
 				SR.flipX = true;
 			}
+
+			if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+				walkinginfieldsource.clip = walkinginfieldsound;
+				walkinginfieldsource.Stop ();
+
+
+			}
+
+
 
 			if (Input.GetKey (KeyCode.UpArrow)) {
 				Vector3 pos = transform.position;
