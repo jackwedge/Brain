@@ -9,6 +9,9 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 	public Animator anim;
 	public Rigidbody2D rigidbody;
 
+	public AudioClip bubblemaninmazeaudioclip;
+	public AudioSource bubblemaninmazeaudiosource;
+
 
 
 
@@ -27,6 +30,10 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 
 
 		if (Input.GetKey (KeyCode.RightArrow)) {
+
+			if (!bubblemaninmazeaudiosource.isPlaying) {
+				bubblemaninmazeaudiosource.PlayOneShot (bubblemaninmazeaudioclip);
+			}
 		//	Vector3 pos = transform.position;
 		//	pos.x += 0.08f;
 			speed.x = +10f;
@@ -36,8 +43,21 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 		//	SR.flipX = false;
 		}
 
+
+		if (Input.GetKeyUp (KeyCode.RightArrow)) {
+
+			bubblemaninmazeaudiosource.Stop ();
+
+
+		}
+
+
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 			speed.x = -10f;
+
+			if (!bubblemaninmazeaudiosource.isPlaying) {
+				bubblemaninmazeaudiosource.PlayOneShot (bubblemaninmazeaudioclip);
+			}
 //			Vector3 pos = transform.position;
 //			pos.x += -0.08f;
 //			transform.position = pos;
@@ -46,8 +66,19 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 		//	SR.flipX = true;
 		}
 
+		if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+
+			bubblemaninmazeaudiosource.Stop ();
+
+
+		}
+
 		if (Input.GetKey (KeyCode.UpArrow)) {
 			speed.y = +10f;
+
+			if (!bubblemaninmazeaudiosource.isPlaying) {
+				bubblemaninmazeaudiosource.PlayOneShot (bubblemaninmazeaudioclip);
+			}
 //			Vector3 pos = transform.position;
 //			pos.y += +0.08f;
 //			transform.position = pos;
@@ -58,12 +89,30 @@ public class walkingcontrollerfinalbrain : MonoBehaviour {
 
 		}
 
+		if (Input.GetKeyUp (KeyCode.UpArrow)) {
+
+			bubblemaninmazeaudiosource.Stop ();
+
+
+		}
+
 		if (Input.GetKey (KeyCode.DownArrow)) {
 			speed.y = -10f;
+
+			if (!bubblemaninmazeaudiosource.isPlaying) {
+				bubblemaninmazeaudiosource.PlayOneShot (bubblemaninmazeaudioclip);
+			}
 //			Vector3 pos = transform.position;
 //			pos.y += -0.08f;
 //			transform.position = pos;
 //		//	walking = true;
+
+
+		}
+
+		if (Input.GetKeyUp (KeyCode.DownArrow)) {
+
+			bubblemaninmazeaudiosource.Stop ();
 
 
 		}

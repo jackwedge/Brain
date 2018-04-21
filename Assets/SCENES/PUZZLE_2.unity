@@ -302,7 +302,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 97503d228fc274350aac29279cbc4aea, type: 3}
   - {fileID: 21300000, guid: 94a6bbd6f88154462a695047833f0378, type: 3}
   lens2: {fileID: 427727217}
-  turnlenssound: {fileID: 8300000, guid: 43a3249162ad54e2a84d478dcdf09628, type: 3}
+  turnlenssound: {fileID: 8300000, guid: b36e83fc026874210b737570c1dfbea1, type: 3}
   turnlenssource: {fileID: 1271674437}
   mylensnumber: 1
   Puzzle2position: {x: 0, y: 0, z: 0}
@@ -883,7 +883,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 81a7691a7d9bb4627b5be667b8b7804a, type: 3}
   - {fileID: 21300000, guid: ac1e2959ca3ad4585b4ec218647e6c7d, type: 3}
   lens2: {fileID: 1356767216}
-  turnlenssound: {fileID: 8300000, guid: 43a3249162ad54e2a84d478dcdf09628, type: 3}
+  turnlenssound: {fileID: 8300000, guid: b36e83fc026874210b737570c1dfbea1, type: 3}
   turnlenssource: {fileID: 1271674437}
   mylensnumber: 1
   Puzzle2position: {x: 0, y: 0, z: 0}
@@ -1343,7 +1343,9 @@ MonoBehaviour:
   underwaterbreathsource: {fileID: 1463986283}
   backwardsbreathingsound: {fileID: 8300000, guid: 84ae8077fca634c63a6b0a4d266418cd,
     type: 3}
-  backwardsbreathingsource: {fileID: 1463986283}
+  backwardsbreathingsource: {fileID: 1925168470}
+  hellotreesound: {fileID: 8300000, guid: 4e19d809940f54dd7a9a553eeb719088, type: 3}
+  hellotreesource: {fileID: 1463986283}
   state: 0
   iseyeballpov: 0
 --- !u!82 &1463986283
@@ -1872,6 +1874,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1925168469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1925168471}
+  - component: {fileID: 1925168470}
+  - component: {fileID: 1925168472}
+  m_Layer: 0
+  m_Name: backwardsbreathing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1925168470
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925168469}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 84ae8077fca634c63a6b0a4d266418cd, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!4 &1925168471
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925168469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.2833257, y: -3.0065455, z: -9.5559635}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1925168472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1925168469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa17872f77e6b4698aa6f870ab5867d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Puzzle2position: {x: 0, y: 0, z: 0}
+  Puzzle2solvedposition: {x: 0, y: 0, z: 0}
+  Puzzle2lookoutside: {x: 0, y: 0, z: 0}
+  gothrougheyesocket: {x: 0, y: 0, z: 0}
+  manager: {fileID: 0}
+  underwaterbreathsound: {fileID: 0}
+  underwaterbreathsource: {fileID: 0}
+  backwardsbreathingsound: {fileID: 8300000, guid: 84ae8077fca634c63a6b0a4d266418cd,
+    type: 3}
+  backwardsbreathingsource: {fileID: 1925168470}
+  hellotreesound: {fileID: 0}
+  hellotreesource: {fileID: 0}
+  state: 0
+  iseyeballpov: 0
 --- !u!1 &2020561424
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +2121,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d740c5e2d75fb45049a0abd9e0a62aed, type: 3}
   - {fileID: 21300000, guid: 974dc273b04cd40bbad54f5a2066ed2b, type: 3}
   lens2: {fileID: 1079601841}
-  turnlenssound: {fileID: 8300000, guid: 43a3249162ad54e2a84d478dcdf09628, type: 3}
+  turnlenssound: {fileID: 8300000, guid: b36e83fc026874210b737570c1dfbea1, type: 3}
   turnlenssource: {fileID: 1271674437}
   mylensnumber: 1
   Puzzle2position: {x: 0, y: 0, z: 0}

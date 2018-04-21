@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class clickondoorgo2eyeball : MonoBehaviour {
 
+	public AudioClip whisperingdutchsound;
+	public AudioSource whisperingdutchsource;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -22,6 +25,9 @@ public class clickondoorgo2eyeball : MonoBehaviour {
 		if (MAINCAMERA.Me.state == 10  && Input.GetMouseButtonDown (0)) {
 
 			MAINCAMERA.Me.state = 11;
+
+			whisperingdutchsource.clip = whisperingdutchsound;
+			whisperingdutchsource.Play ();
 
 		}
 

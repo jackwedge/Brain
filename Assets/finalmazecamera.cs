@@ -14,6 +14,9 @@ public class finalmazecamera : MonoBehaviour {
 	public Vector3 treegrowsrposition;
 	public Transform bubblemantraveling;
 
+	public AudioSource finalmazesource;
+	public AudioClip finalmazeclip;
+
 	public GameObject entirebrain;
 
 	public int state = 0;
@@ -39,6 +42,10 @@ public class finalmazecamera : MonoBehaviour {
 
 		if (state == 0) {
 			transform.position = bigbrainrposition;
+
+			if (!finalmazesource.isPlaying) {
+				finalmazesource.PlayOneShot (finalmazeclip);
+			}
 	}
 
 

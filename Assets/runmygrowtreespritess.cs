@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class runmygrowtreespritess : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class runmygrowtreespritess : MonoBehaviour {
 	public Vector3 treegrowsrposition;
 	public Transform bubblemantraveling;
 	public Vector3 treegoodbyeposition;
+
+	public Vector3 treeposition;
 //	public Camera cam;
 	public endingcameracontroller fincamera;
 
@@ -86,8 +89,25 @@ public class runmygrowtreespritess : MonoBehaviour {
 //
 //				}
 
+
+				if (interval == 185) {
+					//Debug.Log ("changinglocations");
+					SceneManager.LoadScene(0);
+			//	MAINCAMERA.reincarnate = true;
+				
+
+
+
+
+
+				}
+
 			}
 		}
+
+
+
+	
 		
 }	
 }

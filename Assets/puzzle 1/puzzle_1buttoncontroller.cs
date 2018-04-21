@@ -7,8 +7,12 @@ public class puzzle_1buttoncontroller : MonoBehaviour {
 	public SpriteRenderer SR;
 	//declaring from visual interface 
 
+	public AudioSource puzzle1buttonsource;
+	public AudioClip puzzle1buttonsound;
 
 public	int buttonNumber;
+
+
 
 	public	puzzle_1controller managerSolvedPuzzle;
 	float timer;
@@ -62,6 +66,10 @@ public	int buttonNumber;
 		if (hasclicked == true) {
 			SR.color = green; 
 
+
+
+		
+
 		} else if (mouseIsOver == true) {
 			SR.color = yellow;
 
@@ -71,6 +79,13 @@ public	int buttonNumber;
 	}
 
 	void OnMouseDown (){
+
+
+		puzzle1buttonsource.clip = puzzle1buttonsound;
+	puzzle1buttonsource.Play ();
+
+
+
 		//SR.sprite = buttonOnSprite;
 		hasclicked = true;
 		//timer = 6;

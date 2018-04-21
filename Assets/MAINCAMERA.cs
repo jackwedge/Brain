@@ -13,12 +13,21 @@ public class MAINCAMERA : MonoBehaviour
 	public AudioClip windchimes;
 	public AudioSource dissloveallletters;
 	public AudioClip dissolveletterssound;
+	public AudioClip scubabreathingsound;
+	public AudioSource scubabreathingsource;
 
 	public AudioSource walkinginfieldsource;
 	public AudioClip walkinginfieldsound;
 
+
+	public AudioSource insidebrainambiancesource;
+	public AudioClip insidebrainsound;
+
 	public AudioClip hellotreesound;
 	public AudioSource hellotreesource;
+
+	public AudioClip whisperingdutchsound;
+	public AudioSource whisperingdutchsource;
 
 	float timer;
 	//	bool starttimer;
@@ -34,6 +43,9 @@ public class MAINCAMERA : MonoBehaviour
 	public Vector3 Doorisopen;
 	public Vector3 Puzzle2solvedposition;
 	public Vector3 eyeballsocket;
+
+//	public static bool reincarnate = false;
+
 
 
 
@@ -57,17 +69,21 @@ public class MAINCAMERA : MonoBehaviour
 	void Start ()
 	{
 
+	//	if (reincarnate == true) {
 
+		//	state = 2;
+		//	transform.position = treeposition;
+		//}
 
-	//	AudioSource = GetComponent < AudioSource> ();
+			//	AudioSource = GetComponent < AudioSource> ();
 
-	//state = 6;
+			//state = 6;
 	
-		Me = this;
-		//Sound.PlayOneShot (StartSound);
-	}
+			Me = this;
+			//Sound.PlayOneShot (StartSound);
+		}
 	
-	// Update is called once per frame
+		// Update is called once per frame
 
 
 
@@ -239,18 +255,39 @@ yield return new WaitForSeconds (duration);
 			if (timer > 3) {
 				transform.position = welcome2brainposition;
 				state = 7;
+
+
 			}
 		}
 
 	if (state == 8) {
 		transform.position = puzzle1position;
 
+			if (!insidebrainambiancesource.isPlaying) {
+				insidebrainambiancesource.PlayOneShot ( insidebrainsound);
+			}
+
 		}
+
+
+
 
 
 		if (state==7){
 			transform.position= welcome2brainposition;
 		//	SceneManager.LoadScene ("PUZZLE 2");
+
+
+
+			if (!insidebrainambiancesource.isPlaying) {
+				insidebrainambiancesource.PlayOneShot ( insidebrainsound);
+			}
+				
+
+
+
+
+
 		}
 
 
@@ -258,15 +295,40 @@ yield return new WaitForSeconds (duration);
 
 		if (state == 9) {
 			transform.position = dooropening;
+
+			if (!insidebrainambiancesource.isPlaying) {
+				insidebrainambiancesource.PlayOneShot ( insidebrainsound);
+			}
 		}
 
 		if (state == 10) {
 			transform.position = Doorisopen;
+
+			if (!insidebrainambiancesource.isPlaying) {
+				insidebrainambiancesource.PlayOneShot ( insidebrainsound);
+			}
 		}
 
 
 		if (state == 11) {
 			transform.position = eyeballsocket;
+
+
+
+//			if (!whisperingdutchsource.isPlaying) {
+//				whisperingdutchsource.PlayOneShot ( whisperingdutchsound);
+//			}
+
+
+
+			if (insidebrainambiancesource.isPlaying) {
+				insidebrainambiancesource.Stop (); 
+			}
+
+
+
+
+
 		}
 
 

@@ -5,6 +5,10 @@ using UnityEngine;
 public class puzzle_1controller : MonoBehaviour {
 
 
+	public AudioSource puzzle1buttonsource;
+	public AudioSource puzzle1buttonsound;
+
+
 
 
 

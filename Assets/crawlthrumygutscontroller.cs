@@ -11,6 +11,13 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 	public crawlthrumygutscontroller bubblemanwiggling;
 	public cameracontrollerpuzzle3 camera3;
 
+	//public AudioSource chimerssource;
+	//public AudioClip chimersclip;
+
+
+
+	public AudioSource slidingthruintestinessource;
+	public AudioClip slidingthruintestinessound;
 
 
 	//public int state = 0;
@@ -52,6 +59,12 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 			interval++;
 
 
+
+			slidingthruintestinessource.clip = slidingthruintestinessound;
+			slidingthruintestinessource.Play ();
+
+
+
 			if (interval >= mysprites.Length) {
 				interval = mysprites.Length - 1;
 
@@ -59,6 +72,8 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 				if (interval == 129) {
 
 					camera3.state = 1;
+
+
 					//camera3.transform.position = camera3.standontongueposition;
 
 				
@@ -66,6 +81,8 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 
 					//Debug.Log ("comeuptomymouth");
 				}
+
+
 			}
 
 
@@ -75,6 +92,19 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 
 
 		}
+
+
+		if (Input.GetKeyUp (KeyCode.RightArrow)) {
+			if (slidingthruintestinessource.isPlaying) {
+
+
+				slidingthruintestinessource.clip = slidingthruintestinessound;
+				slidingthruintestinessource.Stop ();
+
+			}
+		}
+
+
 
 		if (Input.GetKey (KeyCode.LeftArrow) && timer<=0) {
 			bubblemaningutSpriterenderer.sprite = mysprites [interval];

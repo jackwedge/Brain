@@ -19,6 +19,9 @@ public class puzzle2camera : MonoBehaviour
 	public AudioClip backwardsbreathingsound;
 	public AudioSource backwardsbreathingsource;
 
+	public AudioClip hellotreesound;
+	public AudioSource hellotreesource;
+
 	public int state = 0;
 
 
@@ -47,15 +50,8 @@ public class puzzle2camera : MonoBehaviour
 
 
 		if (state == 0) {
-
-//			if (!underwaterbreathsource.isPlaying) {
-//				underwaterbreathsource.PlayOneShot (underwaterbreathsound);
-//			}
-
-			if (!backwardsbreathingsource.isPlaying) {
-				backwardsbreathingsource.PlayOneShot (backwardsbreathingsound);
-			}
-
+		
+		
 
 
 			transform.position = Puzzle2position;
@@ -66,6 +62,25 @@ public class puzzle2camera : MonoBehaviour
 				iseyeballpov = false;
 
 			}
+
+
+			if (!hellotreesource.isPlaying) {
+
+				hellotreesource.clip = hellotreesound;
+				hellotreesource.Play ();
+			}
+
+
+
+
+			if (!backwardsbreathingsource.isPlaying ) {
+				backwardsbreathingsource.clip= (backwardsbreathingsound);
+
+				backwardsbreathingsource.Play ();
+
+
+			}
+
 		}
 
 		else if (state == 1) {

@@ -27,6 +27,8 @@ public class bubblemaninfield : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+
+
 	void Update () {
 
 
@@ -71,6 +73,9 @@ public class bubblemaninfield : MonoBehaviour {
 
 
 				}
+
+
+
 				Vector3 pos = transform.position;
 				pos.x += -0.04f;
 				transform.position = pos;

@@ -10,6 +10,8 @@ public class crawlingcontrol : MonoBehaviour {
 	public Sprite [] mysprites;
 	public crawlingcontrol bubblemangoing;
 
+	public AudioClip slidingthruintestinessound;
+	public AudioSource slidingthruintestinessource;
 
 
 	float timer;
@@ -35,6 +37,13 @@ public class crawlingcontrol : MonoBehaviour {
 			interval++;
 
 
+			if (!slidingthruintestinessource.isPlaying) {
+				slidingthruintestinessource.PlayOneShot (slidingthruintestinessound);
+			}
+
+
+
+
 			if (interval >= mysprites.Length) {
 				interval = mysprites.Length - 1;
 			}
@@ -44,6 +53,17 @@ public class crawlingcontrol : MonoBehaviour {
 
 
 			timer += waittime;
+
+
+//
+//			if (!slidingthruintestinessource.isPlaying) { // == means "is equal to?"
+//
+//				slidingthruintestinessource.clip = slidingthruintestinessound;
+//				slidingthruintestinessource.Play ();
+//
+//
+//			}
+
 
 
 			if (interval == 48) {
@@ -60,10 +80,33 @@ public class crawlingcontrol : MonoBehaviour {
 
 		}
 
+
+		if (Input.GetKeyUp (KeyCode.RightArrow)) {
+			if (slidingthruintestinessource.isPlaying) {
+
+
+				slidingthruintestinessource.clip = slidingthruintestinessound;
+				slidingthruintestinessource.Stop ();
+
+			}
+		}
+
+
+
+
+
 		if (MAINCAMERA.Me.state == 11 && Input.GetKey (KeyCode.LeftArrow) && timer <= 0) {
 			crawlingbubblemanSpriterenderer.sprite = mysprites [interval];
 
 			interval--;
+
+
+		
+
+
+
+		
+
 
 			if (interval <= 0) {
 				interval = 0;
@@ -72,6 +115,23 @@ public class crawlingcontrol : MonoBehaviour {
 
 			timer += waittime;
 
+
+			if (!slidingthruintestinessource.isPlaying) {
+				slidingthruintestinessource.PlayOneShot (slidingthruintestinessound);
+			}
+
+
+		}
+
+
+		if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+			if (slidingthruintestinessource.isPlaying) {
+
+
+				slidingthruintestinessource.clip = slidingthruintestinessound;
+				slidingthruintestinessource.Stop ();
+
+			}
 		}
 
 

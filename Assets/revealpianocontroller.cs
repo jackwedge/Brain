@@ -10,6 +10,9 @@ public class revealpianocontroller : MonoBehaviour {
 	public Sprite [] tongueliftingupsprites;
 	public cameracontrollerpuzzle3 camera3;
 
+	public AudioClip  chimersclip;
+	public AudioSource chimerssource;
+
 
 
 	float timer =0f;
@@ -42,6 +45,26 @@ public class revealpianocontroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (camera3.state == 1) {
+			if (!chimerssource.isPlaying) {
+				chimerssource.PlayOneShot (chimersclip);
+			}
+		}
+
+//
+//		if ( camera3.state != 1 & camera3.state !=4) {
+//
+//			chimerssource.Stop(); 
+//
+//
+//
+//		}
+
+
+
+
+
 
 //		if (camera3.state = 1) {
 			
@@ -77,6 +100,11 @@ public class revealpianocontroller : MonoBehaviour {
 		if (camera3.state == 4) {
 			camera3.transform.position = camera3.pianopuzzleposition;
 			camera3.state = 2;
+
+			timer += Time.deltaTime;
+			if (timer > 2) {
+				chimerssource.Stop (); 
+			}
 		}
 	
 
@@ -85,6 +113,24 @@ public class revealpianocontroller : MonoBehaviour {
 			interval = 0;
 			activearray = tongueliftingupsprites;
 			camera3.state = 4;
+		
+
+		//	chimerssource.Stop (); 
+
+		//	Debug.Log ("stopthefuckingchimes");
+
+
+
+		}
+
+
+		if (camera3.state == 2) {
+			
+			chimerssource.Stop (); 
+		}
+
+
+
 
 		}
 
@@ -98,14 +144,7 @@ public class revealpianocontroller : MonoBehaviour {
 
 
 
-			
-
 	
-}
-
-			
-
-
 		
 
 
