@@ -7,13 +7,22 @@ public class buttonfunction : MonoBehaviour {
 
 
 	public Sprite fieldhelp;
-	public Sprite brainhelp;
+	//public Sprite brainhelp;
 	public Sprite treehelp;
 	//declare new sprites here
 	public Image helpTextBox;
-	public GameObject cameraGO;
+
 
 	bool hide = true;
+
+
+	public GameObject cameraGO;
+
+
+
+
+
+
 
 	// Use this for initialization
 	void Start() {
@@ -32,10 +41,10 @@ public class buttonfunction : MonoBehaviour {
 		{
 			helpTextBox.GetComponent<Image>().sprite = treehelp;
 		}
-		else if (cameraGO.GetComponent<Transform>().position == cameraGO.GetComponent<MAINCAMERA>().welcome2brainposition)
-		{
-			helpTextBox.GetComponent<Image>().sprite = brainhelp;
-		}
+//		else if (camerascene2.GetComponent<Transform>().position == camerascene2.GetComponent<puzzle2camera>().Puzzle2position)
+//		{
+//			helpTextBox.GetComponent<Image>().sprite = eyeballhelp;
+//		}
 
 
 		if(	Input.GetMouseButtonDown (0)) { 
@@ -46,7 +55,61 @@ public class buttonfunction : MonoBehaviour {
 			Debug.Log("not here");
 		}
 
+
+		if (Input.GetKey (KeyCode.RightArrow)) {
+
+
+
+			helpTextBox.gameObject.SetActive(false);
+			hide = true;
+
+
+		}
+
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+
+
+			helpTextBox.gameObject.SetActive(false);
+
+			hide = true;
+
+
+		}
+
+
+		if (Input.GetKey (KeyCode.UpArrow)) {
+
+			helpTextBox.gameObject.SetActive(false);
+
+			hide = true;
+
+
+		}
+
+
+		if (Input.GetKey (KeyCode.DownArrow)) {
+
+			helpTextBox.gameObject.SetActive(false);
+
+			hide = true;
+
+
+		}
+
+
+
+
+
+
+
+
+
+
+
 	}
+
+
+
 
 
 	public void onButtonPress()
@@ -58,6 +121,14 @@ public class buttonfunction : MonoBehaviour {
 			hide = false;
 			Debug.Log("here");
 		}
+
+
+
+
+
+
+
+
 
 	}
 

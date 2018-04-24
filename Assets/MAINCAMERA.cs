@@ -366,7 +366,7 @@ yield return new WaitForSeconds (duration);
 
 	void hideshowButton() //This is where all the hint button stuff works, If you want to make changes it will be in here
 	{
-		if (transform.position == fieldposition || transform.position == treeposition || transform.position == welcome2brainposition) //add new locations here for hide show button
+		if (transform.position == fieldposition || transform.position == treeposition ) //add new locations here for hide show button
 		{
 			button.gameObject.SetActive(true); //when this scene is up, show the button
 		}

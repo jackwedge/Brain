@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 
 public class puzzle2camera : MonoBehaviour
 {
+
+
+	public GameObject button;
 	public Vector3 Puzzle2position;
 	public Vector3 Puzzle2solvedposition;
 	public Vector3 Puzzle2lookoutside;
@@ -37,8 +40,11 @@ public class puzzle2camera : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update ()
+
+
 	{
 
+		hideshowButton ();
 
 
 
@@ -123,6 +129,9 @@ public class puzzle2camera : MonoBehaviour
 
 
 
+
+
+
 	IEnumerator delay (float duration, int newState)
 	{
 		//Debug.Log ("startingdelay");
@@ -137,6 +146,23 @@ public class puzzle2camera : MonoBehaviour
 
 
 	}
+
+
+
+
+
+	void hideshowButton() //This is where all the hint button stuff works, If you want to make changes it will be in here
+	{
+		if (transform.position == Puzzle2position) //add new locations here for hide show button
+		{
+			button.gameObject.SetActive(true); //when this scene is up, show the button
+		}
+		else
+		{
+			button.gameObject.SetActive(false);
+		}
+	}
+
 
 
 

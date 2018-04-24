@@ -74,6 +74,8 @@ public class crawlthrumygutscontroller : MonoBehaviour {
 					camera3.state = 1;
 
 
+
+
 					//camera3.transform.position = camera3.standontongueposition;
 
 				

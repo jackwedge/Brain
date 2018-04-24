@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class cameracontrollerpuzzle3 : MonoBehaviour {
 
+	public GameObject button;
+
 	float timer;
 	public Vector3 intenstinesposition;
 	public Vector3 pianopuzzleposition;
 	public Vector3 standontongueposition;
 	public Vector3 musicmouthpoisiton;
+
+
 	public cameracontrollerpuzzle3 camera3;
 
 	public AudioSource chimerssource;
@@ -18,6 +22,9 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 
 	public AudioSource scubasource;
 	public AudioClip scubaclip;
+
+	public AudioClip whisperingdutchsound;
+	public AudioSource whisperingdutchsource;
 
 
 	public AudioSource brokenharmoniumsource;
@@ -54,6 +61,9 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 	void Update () {
 
 
+		hideshowButton ();
+
+
 
 
 
@@ -66,11 +76,23 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 				scubasource.PlayOneShot (scubaclip);
 			}
 
+
+			if (!whisperingdutchsource.isPlaying) {
+				whisperingdutchsource.PlayOneShot (whisperingdutchsound);
+			}
+
+
+
+
+
+
 		}
 
 		if ( state != 0) {
 
 			scubasource.Stop(); 
+
+			whisperingdutchsource.Stop ();
 
 
 
@@ -80,9 +102,9 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 		if (state == 1) {
 			transform.position = standontongueposition;
 
-//			if (!chimerssource.isPlaying) {
-//				chimerssource.PlayOneShot (chimersclip);
-//			}
+			if (!chimerssource.isPlaying) {
+				chimerssource.PlayOneShot (chimersclip);
+		}
 		}
 
 
@@ -184,6 +206,37 @@ public class cameracontrollerpuzzle3 : MonoBehaviour {
 
 
 	}
+
+
+
+	void hideshowButton() //This is where all the hint button stuff works, If you want to make changes it will be in here
+	{
+		if (transform.position == intenstinesposition) //add new locations here for hide show button
+		{
+			button.gameObject.SetActive(true); //when this scene is up, show the button
+		}
+
+
+
+		else	if (transform.position == standontongueposition) //add new locations here for hide show button
+		{
+			button.gameObject.SetActive(true); //when this scene is up, show the button
+		}
+
+
+		else	if (transform.position == pianopuzzleposition) //add new locations here for hide show button
+		{
+			button.gameObject.SetActive(true); //when this scene is up, show the button
+		}
+
+
+
+		else
+		{
+			button.gameObject.SetActive(false);
+		}
+	}
+
 
 
 }

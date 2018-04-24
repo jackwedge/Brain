@@ -27,7 +27,9 @@ public class tree : MonoBehaviour {
 	// Update is called once per frame
 
 	void OnMouseDown(){
-//		Debug.Log("click");
+
+
+		Debug.Log("click");
 		if (MAINCAMERA.Me.state == 1  && Input.GetMouseButtonDown (0)) {
 			hatch = true;
 

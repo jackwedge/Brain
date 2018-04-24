@@ -52,22 +52,8 @@ public class revealpianocontroller : MonoBehaviour {
 			}
 		}
 
-//
-//		if ( camera3.state != 1 & camera3.state !=4) {
-//
-//			chimerssource.Stop(); 
-//
-//
-//
-//		}
 
 
-
-
-
-
-//		if (camera3.state = 1) {
-			
 
 			if (Time.time >= timer+waittime){
 				timer = Time.time;
@@ -75,7 +61,7 @@ public class revealpianocontroller : MonoBehaviour {
 				interval++;
 			}
 
-//		}
+
 
 		if (activearray == tongueliftingupsprites && revealpianoSpriterenderer.sprite == tongueliftingupsprites [tongueliftingupsprites.Length-1]) {
 
