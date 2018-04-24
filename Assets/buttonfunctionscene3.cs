@@ -98,6 +98,12 @@ public class buttonfunctionscene3 : MonoBehaviour {
 
 		}
 
+		if (Input.GetKey (KeyCode.Space)) {
+			helpTextBox.gameObject.SetActive (false);
+
+			hide = true;
+		}
+
 	}
 
 

@@ -26,14 +26,14 @@ public class bubblemanstopyelllinganimationcontroller : MonoBehaviour {
 
 
 		if (Input.GetMouseButton (0)) {
-			animationcontroller.Play ("bubblemansitting");
+			animationcontroller.Play ("hint");
 
 			Debug.Log ("areyouworkingtoday?");
 		} 
 
 //
 		else {
-			animationcontroller.Play ("hint");
+			animationcontroller.Play ("bubblemansitting");
 
 		}
 	}

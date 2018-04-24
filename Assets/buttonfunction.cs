@@ -96,6 +96,13 @@ public class buttonfunction : MonoBehaviour {
 
 		}
 
+		if (Input.GetKey (KeyCode.Space)) {
+			helpTextBox.gameObject.SetActive (false);
+
+			hide = true;
+		}
+			
+
 
 
 
