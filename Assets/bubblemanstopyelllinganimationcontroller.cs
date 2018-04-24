@@ -6,7 +6,7 @@ public class bubblemanstopyelllinganimationcontroller : MonoBehaviour {
 
 	public Animator animationcontroller; 
 
-
+	bool react=false;
 
 
 
@@ -26,7 +26,10 @@ public class bubblemanstopyelllinganimationcontroller : MonoBehaviour {
 
 
 		if (Input.GetMouseButton (0)) {
+
+			//animationcontroller.SetBool = react;
 			animationcontroller.Play ("hint");
+			react =true;
 
 			Debug.Log ("areyouworkingtoday?");
 		} 

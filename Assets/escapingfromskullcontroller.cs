@@ -17,6 +17,10 @@ public class escapingfromskullcontroller : MonoBehaviour {
 	public escapingfromskullcontroller bubblemanisfree;
 	public endingcameracontroller fincamera;
 
+
+	public AudioClip slidingthruintestinessound;
+	public AudioSource slidingthruintestinessource;
+
 	//public int state = 0;
 
 	//public Camera cam;
@@ -57,7 +61,13 @@ public class escapingfromskullcontroller : MonoBehaviour {
 
 			}
 
+
+
 			interval++;
+
+				if (!slidingthruintestinessource.isPlaying) {
+					slidingthruintestinessource.PlayOneShot (slidingthruintestinessound);
+				}
 
 
 			if (interval >= mysprites.Length) {
@@ -87,6 +97,17 @@ public class escapingfromskullcontroller : MonoBehaviour {
 					}
 			}
 		}
+
+
+			if (Input.GetKeyUp (KeyCode.RightArrow)) {
+				if (slidingthruintestinessource.isPlaying) {
+
+
+					slidingthruintestinessource.clip = slidingthruintestinessound;
+					slidingthruintestinessource.Stop ();
+
+				}
+			}
 
 		if (Input.GetKey (KeyCode.LeftArrow) && timer <= 0) {
 

@@ -23,6 +23,10 @@ public class runmygrowtreespritess : MonoBehaviour {
 	public endingcameracontroller fincamera;
 
 
+	public AudioClip slidingthruintestinessound;
+	public AudioSource slidingthruintestinessource;
+
+
 
 	float timer;
 
@@ -48,6 +52,13 @@ public class runmygrowtreespritess : MonoBehaviour {
 				if (interval < mysprites.Length) {
 					reincarnationSpriterenderer.sprite = mysprites [interval];
 					interval++;
+
+
+//					if (!slidingthruintestinessource.isPlaying) {
+//						slidingthruintestinessource.PlayOneShot (slidingthruintestinessound);
+//					}
+
+
 				}
 
 				timer += waittime;
@@ -90,6 +101,9 @@ public class runmygrowtreespritess : MonoBehaviour {
 //				}
 
 
+
+
+
 				if (interval == 185) {
 					//Debug.Log ("changinglocations");
 					SceneManager.LoadScene(0);
@@ -103,6 +117,20 @@ public class runmygrowtreespritess : MonoBehaviour {
 				}
 
 			}
+
+
+
+//			if (Input.GetKeyUp (KeyCode.RightArrow)) {
+//				if (slidingthruintestinessource.isPlaying) {
+//
+//
+//					slidingthruintestinessource.clip = slidingthruintestinessound;
+//					slidingthruintestinessource.Stop ();
+//
+//				}
+//			}
+
+
 		}
 
 

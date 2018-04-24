@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class endingcameracontroller : MonoBehaviour {
 	float timer;
+
+	public GameObject button;
 	
 	public Vector3 myskinisunravelingrposition;
 	public Vector3 skeletonfallsoverrposition;
@@ -54,6 +57,9 @@ public class endingcameracontroller : MonoBehaviour {
 	void Update () {
 
 
+		hideshowButton ();
+
+
 		if (state == 0) {
 			transform.position = myskinisunravelingrposition;
 
@@ -61,6 +67,7 @@ public class endingcameracontroller : MonoBehaviour {
 //			youescapedwindsource.clip = youescapedwindclip;
 //			youescapedwindsource.Play ();
 //
+
 
 		
 
@@ -72,6 +79,11 @@ public class endingcameracontroller : MonoBehaviour {
 			if (!youescapedwindsource.isPlaying) {
 				youescapedwindsource.PlayOneShot (youescapedwindclip);
 			}
+
+
+//			if (!skinunravelingsource.isPlaying) {
+//				skinunravelingsource.PlayOneShot (skinunravelingclip);
+//			}
 
 
 
@@ -154,4 +166,22 @@ public class endingcameracontroller : MonoBehaviour {
 			youescapedwindsource.Play ();
 		}
 }
+
+	void hideshowButton() //This is where all the hint button stuff works, If you want to make changes it will be in here
+	{
+		if (transform.position == runoutofskullrposition ) //add new locations here for hide show button
+		{
+			button.gameObject.SetActive(true); //when this scene is up, show the button
+		}
+		else 
+		{
+			button.gameObject.SetActive(false);
+		}
+	}
+
+
+
+
+
+
 }
