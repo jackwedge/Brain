@@ -8,6 +8,9 @@ public class bubblemanstopyelllinganimationcontroller : MonoBehaviour {
 
 	bool react=false;
 
+	public AudioSource payattentionsource;
+	public AudioClip payattentionclip;
+
 
 
 
@@ -26,6 +29,15 @@ public class bubblemanstopyelllinganimationcontroller : MonoBehaviour {
 
 
 		if (Input.GetMouseButton (0)) {
+
+
+			Debug.Log ("areyouworkingtoday?");
+			if (!payattentionsource.isPlaying) {
+				payattentionsource.PlayOneShot (payattentionclip);
+			}
+
+
+
 
 			//animationcontroller.SetBool = react;
 			animationcontroller.Play ("hint");

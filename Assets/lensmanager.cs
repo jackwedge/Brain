@@ -61,6 +61,30 @@ Sprite lens1sprite;
 
 		}
 
+
+
+		else if (lens1Name.Equals ("eyeball puzzle0043") && lens2Name.Equals ("eyeball puzzle0058") && lens3Name.Equals ("eyeball puzzle0091") && cam.iseyeballpov){
+
+			youreawinner = true;
+			Debug.Log ("YOUREAWINNERPLSWORK");
+
+		}
+
+		else if (lens1Name.Equals ("eyeball puzzle0030") && lens2Name.Equals ("eyeball puzzle0073") && lens3Name.Equals ("eyeball puzzle0076") && cam.iseyeballpov){
+
+			youreawinner = true;
+			Debug.Log ("YOUREAWINNERPLSWORK");
+
+		}
+
+
+		else if (lens1Name.Equals ("eyeball puzzle0034") && lens2Name.Equals ("eyeball puzzle0067") && lens3Name.Equals ("eyeball puzzle0082") && cam.iseyeballpov){
+
+			youreawinner = true;
+			Debug.Log ("YOUREAWINNERPLSWORK");
+
+		}
+
 }
 }
  

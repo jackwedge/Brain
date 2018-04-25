@@ -270,6 +270,16 @@ yield return new WaitForSeconds (duration);
 		}
 
 
+		if (state == 8) {
+			if (Input.GetKeyDown ("space")) {
+				transform.position = welcome2brainposition;
+
+				state = 7;
+
+			}
+		}
+
+
 
 
 
